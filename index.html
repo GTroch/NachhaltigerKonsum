@@ -1,0 +1,1112 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nachhaltig konsumieren – Strategien &amp; Ziele</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+<style>
+:root{
+  color-scheme:light;
+  --paper:#f5f1e8; --card:#fffdf8; --sunk:#ebe5d8; --line:#d9d0bd;
+  --ink:#1e2a23; --muted:#5d6a61; --accent:#1f6b4a; --accent-soft:#dcebe1;
+  --oeko:#2f7d4a; --oeko-soft:#e0efe4;
+  --wirt:#2b5d9b; --wirt-soft:#e1eaf6;
+  --soz:#c0532a; --soz-soft:#f7e3d9;
+  --eff:#0f7f86; --eff-soft:#dbf0f1;
+  --kon:#6b4ea8; --kon-soft:#ebe4f6;
+  --suf:#b07812; --suf-soft:#f6ecd6;
+  --ok:#1f7a3f; --ok-soft:#dff2e3; --bad:#b3261e; --bad-soft:#fbe3e0; --warn:#9a6700;
+  --f-display:"Fraunces",Georgia,"Times New Roman",serif;
+  --f-body:"Source Sans 3",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 var(--f-body)}
+h1,h2,h3,h4{font-family:var(--f-display);line-height:1.15;margin:0;text-wrap:balance}
+h1{font-size:clamp(2rem,5.5vw,3.4rem);font-weight:800;letter-spacing:-.015em}
+h2{font-size:clamp(1.5rem,3.4vw,2.1rem);font-weight:800;margin:44px 0 10px}
+h3{font-size:1.2rem;font-weight:600;margin:26px 0 8px}
+p{margin:0 0 12px}
+a{color:var(--accent)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+.prose{max-width:760px}
+.muted{color:var(--muted)}
+.eyebrow{font:700 .78rem/1 var(--f-body);letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+/* Kopf */
+header.top{position:sticky;top:0;z-index:20;background:rgba(245,241,232,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.topin{max-width:1040px;margin:0 auto;padding:8px 16px;display:flex;gap:10px;align-items:center;overflow-x:auto;scrollbar-width:thin}
+.topin .brand{font:800 1rem var(--f-display);white-space:nowrap;margin-right:6px;color:var(--accent)}
+nav#nav{display:flex;gap:4px}
+nav#nav button{border:1px solid transparent;background:transparent;border-radius:999px;padding:5px 11px;font:600 .9rem var(--f-body);color:var(--muted);cursor:pointer;white-space:nowrap}
+nav#nav button:hover{background:var(--sunk);color:var(--ink)}
+nav#nav button.on{background:var(--ink);color:#fff}
+nav#nav button .done{color:var(--ok);margin-left:3px}
+nav#nav button.on .done{color:#9ee6b0}
+.bar{height:4px;background:var(--sunk)}.bar div{height:100%;width:0;background:var(--accent);transition:width .4s}
+main{padding:24px 0 80px}
+section.st{display:none}section.st.on{display:block;animation:in .3s ease}
+@keyframes in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.sthead{display:grid;gap:10px;padding:18px 0 8px;border-bottom:2px solid var(--ink);margin-bottom:18px}
+.sthead .lead{font-size:1.15rem;color:var(--muted);max-width:780px;margin:0}
+/* Kästen */
+.box{border-radius:12px;padding:14px 18px;margin:18px 0;border:1px solid var(--line);background:var(--card)}
+.box>h4{font:700 1rem var(--f-body);margin:0 0 6px;display:flex;gap:8px;align-items:center}
+.box>*:last-child{margin-bottom:0}
+.merk{background:#fff6cf;border-color:#e9cf5b;border-left:6px solid #e0b400}
+.auf{border-left:6px solid var(--soz)}
+.auf>h4{color:var(--soz)}
+.tipp{background:#e9f1fb;border-color:#bcd2ee;border-left:6px solid var(--wirt)}
+.aktuell{background:#f1ecfa;border-color:#d4c8ef;border-left:6px solid var(--kon)}
+.quelle{font-size:.85rem;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.btn{font:600 .95rem var(--f-body);border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:9px;padding:7px 13px;cursor:pointer}
+.btn:hover{background:var(--sunk)}
+.btn.pri{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn.pri:hover{filter:brightness(1.08)}
+.btn.sm{padding:4px 9px;font-size:.85rem}
+.fb{font-weight:700;margin-left:8px}
+.fb.ok{color:var(--ok)}.fb.bad{color:var(--bad)}
+.pill{display:inline-block;font:700 .75rem var(--f-body);padding:2px 9px;border-radius:999px;background:var(--sunk);color:var(--muted);margin:2px 4px 2px 0}
+.p-oeko{background:var(--oeko-soft);color:var(--oeko)}.p-wirt{background:var(--wirt-soft);color:var(--wirt)}.p-soz{background:var(--soz-soft);color:var(--soz)}
+.p-eff{background:var(--eff-soft);color:var(--eff)}.p-kon{background:var(--kon-soft);color:var(--kon)}.p-suf{background:var(--suf-soft);color:var(--suf)}
+/* Start */
+.hero{display:grid;grid-template-columns:1.25fr 1fr;gap:28px;align-items:center;padding:16px 0 10px}
+.hero p.lead{font-size:1.2rem;color:var(--muted);max-width:620px}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px}
+.stat b{display:block;font:800 1.9rem/1.05 var(--f-display);color:var(--accent)}
+.stat span{font-size:.92rem;color:var(--muted)}
+.route{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:14px 0}
+.route button{all:unset;cursor:pointer;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:block;transition:.15s}
+.route button:hover,.route button:focus-visible{border-color:var(--accent);box-shadow:0 6px 18px rgba(30,42,35,.08);transform:translateY(-2px)}
+.route b{display:block;font:700 1.05rem var(--f-display)}
+.route small{color:var(--muted);font-size:.9rem;display:block;margin-top:2px}
+.route i{font-style:normal;font:800 .8rem var(--f-body);color:var(--accent);letter-spacing:.08em}
+@media(max-width:780px){.hero{grid-template-columns:1fr}}
+/* Positionslinie */
+.posline{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:14px 0}
+.posline p{font-weight:700;margin-bottom:6px}
+.posline input[type=range]{width:100%;accent-color:var(--accent)}
+.posline .scale{display:flex;justify-content:space-between;font-size:.82rem;color:var(--muted)}
+/* Dreieck */
+.tri{display:grid;grid-template-columns:minmax(260px,380px) 1fr;gap:22px;align-items:center}
+.tri svg{width:100%;height:auto}
+.tri svg .corner{cursor:pointer}
+.tri svg .corner:hover circle,.tri svg .corner.on circle{stroke:var(--ink);stroke-width:3}
+.triinfo{min-height:170px}
+@media(max-width:720px){.tri{grid-template-columns:1fr}}
+/* Sortierkarten */
+.sort{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px;margin:12px 0}
+.sc{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:11px 13px;display:flex;flex-direction:column;gap:8px}
+.sc .t{font-weight:600}
+.sc .src{font-size:.8rem;color:var(--muted)}
+.sc .opts{display:flex;flex-wrap:wrap;gap:5px}
+.sc .opts button{font:600 .82rem var(--f-body);border-radius:999px;border:1px solid var(--line);background:var(--paper);padding:3px 10px;cursor:pointer;color:var(--ink)}
+.sc .opts button:hover{background:var(--sunk)}
+.sc .opts button.pick-ok{background:var(--ok);border-color:var(--ok);color:#fff}
+.sc .opts button.pick-bad{background:var(--bad-soft);border-color:var(--bad);color:var(--bad)}
+.sc.right{border-color:var(--ok);box-shadow:inset 4px 0 0 var(--ok)}
+.sc.wrong{border-color:var(--bad);box-shadow:inset 4px 0 0 var(--bad)}
+.sc .ex{display:none;font-size:.9rem;color:var(--muted);border-top:1px dashed var(--line);padding-top:6px}
+.sc.right .ex,.sc.wrong .ex{display:block}
+.score{font-weight:700;margin:6px 0 0}
+/* Strategien */
+.strat{border-radius:14px;padding:16px;border:1px solid var(--line);background:var(--card);position:relative;overflow:hidden}
+.strat h3{margin:0 0 4px}
+.strat .q{font:italic 600 1.05rem var(--f-display);margin:2px 0 8px}
+.strat.eff{border-top:6px solid var(--eff)}.strat.eff h3{color:var(--eff)}
+.strat.kon{border-top:6px solid var(--kon)}.strat.kon h3{color:var(--kon)}
+.strat.suf{border-top:6px solid var(--suf)}.strat.suf h3{color:var(--suf)}
+.strat ul{margin:6px 0 0;padding-left:18px}
+/* SDG */
+.sdgs{display:grid;grid-template-columns:repeat(auto-fill,minmax(112px,1fr));gap:8px;margin:12px 0}
+.sdg{all:unset;cursor:pointer;border-radius:10px;padding:10px;color:#fff;min-height:96px;display:flex;flex-direction:column;justify-content:space-between;transition:transform .12s;box-shadow:inset 0 -3px 0 rgba(0,0,0,.15)}
+.sdg:hover,.sdg:focus-visible{transform:translateY(-2px)}
+.sdg.on{outline:3px solid var(--ink);outline-offset:2px}
+.sdg b{font:800 1.6rem/1 var(--f-display)}
+.sdg span{font:700 .78rem/1.2 var(--f-body)}
+.sdg.dark{color:#1e2a23}
+.sdginfo{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;min-height:110px}
+.sdgpick{display:grid;grid-template-columns:repeat(auto-fill,minmax(46px,1fr));gap:5px;margin:8px 0}
+.sdgpick button{border:2px solid transparent;border-radius:8px;color:#fff;font:800 1rem var(--f-display);padding:8px 0;cursor:pointer;opacity:.45}
+.sdgpick button.sel{opacity:1;border-color:var(--ink)}
+.sdgpick button.dark{color:#1e2a23}
+/* Ziele-Check */
+table.zc{border-collapse:collapse;width:100%;background:var(--card);font-size:.95rem}
+table.zc th,table.zc td{border:1px solid var(--line);padding:8px 10px;vertical-align:top;text-align:left}
+table.zc th{background:var(--sunk);font-size:.85rem}
+table.zc td.c{text-align:center;white-space:nowrap}
+table.zc td.c input{width:20px;height:20px;accent-color:var(--accent)}
+table.zc tr.ok td{background:#f2faf4}
+table.zc .sol{display:none;font-size:.85rem;color:var(--muted);margin-top:4px}
+table.zc.show .sol{display:block}
+.tablewrap{overflow-x:auto}
+/* Kreislauf */
+.flow{display:flex;gap:8px;flex-wrap:wrap;align-items:stretch;margin:12px 0}
+.flow button{all:unset;cursor:pointer;flex:1 1 140px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 12px;text-align:center;font-weight:700;position:relative}
+.flow button small{display:block;font-weight:400;color:var(--muted);font-size:.82rem}
+.flow button.on{background:var(--ink);color:#fff}.flow button.on small{color:#cfd8d2}
+.flowinfo{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 16px;min-height:90px}
+.rank{list-style:none;padding:0;margin:10px 0;max-width:640px;counter-reset:r}
+.rank li{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px 10px;margin:5px 0;display:flex;align-items:center;gap:10px;counter-increment:r}
+.rank li::before{content:counter(r);font:800 1rem var(--f-display);width:26px;height:26px;border-radius:50%;background:var(--sunk);display:grid;place-items:center;flex:none}
+.rank li span{flex:1}
+.rank li .mv{display:flex;gap:3px}
+.rank li .mv button{width:30px;height:28px;border:1px solid var(--line);background:var(--paper);border-radius:6px;cursor:pointer}
+.rank li.right{border-color:var(--ok);background:var(--ok-soft)}
+.rank li.wrong{border-color:var(--bad);background:var(--bad-soft)}
+/* Unternehmen */
+.firms{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+.firms button{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:6px 13px;font:700 .92rem var(--f-body);cursor:pointer;color:var(--ink)}
+.firms button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.firm{display:grid;grid-template-columns:1.4fr 1fr;gap:18px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+@media(max-width:820px){.firm{grid-template-columns:1fr}}
+.firm h3{margin:0 0 4px;font-size:1.5rem}
+.firm .model{font-style:italic;color:var(--muted);margin-bottom:10px}
+.measures{list-style:none;padding:0;margin:0}
+.measures li{padding:7px 0;border-bottom:1px dashed var(--line)}
+.measures li:last-child{border:0}
+.radar svg{width:100%;max-width:300px;display:block;margin:0 auto}
+.radar label{display:grid;grid-template-columns:90px 1fr 22px;gap:8px;align-items:center;font-size:.9rem;font-weight:600}
+.radar input{accent-color:var(--accent)}
+.crit{font-size:.92rem;background:var(--paper);border-radius:10px;padding:10px 12px;margin-top:10px}
+details.acc{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:8px 14px;margin:8px 0}
+details.acc summary{cursor:pointer;font-weight:700}
+details.acc ol{margin:8px 0 4px}
+/* Greenwashing */
+.gw-ad{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start}
+@media(max-width:820px){.gw-ad{grid-template-columns:1fr}}
+.gw-ad figure{margin:0}
+.gw-ad img{width:100%;border-radius:10px;border:1px solid var(--line);display:block;background:#fff}
+.gw-ad figcaption{font-size:.82rem;color:var(--muted);margin-top:4px}
+.reveal{border:1px solid var(--line);border-radius:10px;margin:6px 0;background:var(--card);overflow:hidden}
+.reveal button{all:unset;cursor:pointer;display:flex;gap:10px;align-items:flex-start;padding:9px 12px;width:100%;box-sizing:border-box}
+.reveal button::before{content:"＋";font-weight:800;color:var(--soz)}
+.reveal.open button::before{content:"－"}
+.reveal .hid{display:none;padding:0 12px 10px 34px;color:var(--ink);background:var(--soz-soft)}
+.reveal.open .hid{display:block;padding-top:8px}
+/* Siegel */
+.flip{perspective:900px;min-height:270px;cursor:pointer}
+.flip .in{position:relative;width:100%;height:100%;min-height:270px;transition:transform .5s;transform-style:preserve-3d}
+.flip.on .in{transform:rotateY(180deg)}
+.flip .f,.flip .b{position:absolute;inset:0;backface-visibility:hidden;border-radius:14px;padding:14px 16px;border:1px solid var(--line);background:var(--card);overflow:auto}
+.flip .b{transform:rotateY(180deg);background:#fbfaf5}
+.flip .f h4{font:800 1.3rem var(--f-display);margin:0 0 6px}
+.flip dl{margin:0;font-size:.9rem}
+.flip dt{font-weight:700;color:var(--muted);font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;margin-top:6px}
+.flip dd{margin:0}
+.flip .b ul{margin:4px 0 8px;padding-left:18px;font-size:.92rem}
+.flip .hintf{position:absolute;bottom:10px;right:14px;font-size:.78rem;color:var(--muted)}
+.lab{display:grid;gap:12px}
+.labcase{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.labcase .chk{display:flex;flex-wrap:wrap;gap:14px;margin:8px 0}
+.labcase .chk label{display:flex;gap:6px;align-items:center;font-size:.92rem}
+.labcase .verdict{font-weight:700;margin-top:6px}
+/* Lieferkette */
+.chain{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin:12px 0}
+.chain .node{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:8px 12px;font-weight:700;text-align:center;flex:1 1 110px}
+.chain .node small{display:block;font-weight:400;color:var(--muted);font-size:.8rem}
+.chain .arr{color:var(--muted);font-weight:800}
+.disaster{background:var(--card);border:1px solid var(--line);border-left:6px solid #3a3a3a;border-radius:12px;padding:12px 14px}
+.disaster b.n{font:800 1.8rem/1 var(--f-display);color:var(--bad);display:block}
+.disaster .more{display:none;font-size:.92rem;margin-top:6px}
+.disaster.open .more{display:block}
+.bars{display:grid;gap:8px;margin:10px 0;max-width:640px}
+.bars .r{display:grid;grid-template-columns:minmax(150px,260px) 1fr 48px;gap:10px;align-items:center;font-size:.92rem}
+.bars .t{background:var(--sunk);border-radius:6px;height:16px;overflow:hidden}
+.bars .t div{height:100%;background:var(--wirt);border-radius:6px}
+.bars .v{font-weight:700;text-align:right}
+/* Quiz */
+.qq{margin:12px 0 18px}
+.qq>p{font-weight:700;margin-bottom:6px}
+.qq label{display:block;padding:6px 10px;border:1px solid var(--line);border-radius:9px;margin:5px 0;background:var(--card);cursor:pointer}
+.qq label:hover{background:var(--sunk)}
+.qq label.right{background:var(--ok-soft);border-color:var(--ok)}
+.qq label.wrong{background:var(--bad-soft);border-color:var(--bad)}
+.qq .ex{display:none;font-size:.92rem;color:var(--muted);margin-top:4px}
+.qq.done .ex{display:block}
+/* Kodex */
+.kodex{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.kodex .ph{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px}
+.kodex .ph h4{font:800 1.1rem var(--f-display);margin:0 0 8px}
+.kodex textarea{width:100%;min-height:120px;font:1rem/1.5 var(--f-body);border:1px solid var(--line);border-radius:9px;padding:8px 10px;background:#fff;resize:vertical;color:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
+.chips button{font:600 .8rem var(--f-body);border:1px dashed var(--accent);background:transparent;color:var(--accent);border-radius:999px;padding:3px 9px;cursor:pointer}
+.chips button:hover{background:var(--accent-soft)}
+.compare{display:grid;gap:8px;max-width:640px}
+.compare .r{display:grid;grid-template-columns:110px 1fr 30px;gap:10px;align-items:center}
+.compare .t{height:14px;background:var(--sunk);border-radius:7px;position:relative}
+.compare .t div{position:absolute;top:0;bottom:0;left:0;border-radius:7px}
+.foot{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:40px;padding-top:16px;border-top:1px solid var(--line)}
+footer{max-width:1040px;margin:0 auto;padding:10px 16px 40px;color:var(--muted);font-size:.85rem}
+
+/* SIA */
+.sia-hero{display:grid;grid-template-columns:1.3fr 1fr;gap:20px;align-items:start}
+@media(max-width:820px){.sia-hero{grid-template-columns:1fr}}
+.sia-facts{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.sia-facts div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 12px}
+.sia-facts b{display:block;font:800 1.25rem/1.1 var(--f-display);color:var(--accent)}
+.sia-facts span{font-size:.85rem;color:var(--muted)}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px;counter-reset:s;margin:10px 0}
+.steps div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;counter-increment:s;position:relative}
+.steps div::before{content:counter(s);position:absolute;top:-10px;left:12px;background:var(--ink);color:#fff;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font:800 .85rem var(--f-body)}
+.steps b{display:block;margin-top:4px}
+.cats{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+.cats button{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:6px 13px;font:700 .9rem var(--f-body);cursor:pointer;color:var(--ink)}
+.cats button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.catdesc{color:var(--muted);margin:0 0 10px}
+.podium{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.win{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;gap:6px;position:relative}
+.win .place{font:800 .8rem var(--f-body);letter-spacing:.08em;text-transform:uppercase}
+.win.p1{border-top:6px solid #c9a227}.win.p2{border-top:6px solid #9aa3ab}.win.p3{border-top:6px solid #b0723f}
+.win.p1 .place{color:#9a7a10}.win.p2 .place{color:#6c757d}.win.p3 .place{color:#8a5326}
+.win h4{font:800 1.2rem var(--f-display);margin:0}
+.win .what{font-style:italic;color:var(--muted);font-size:.92rem}
+.win ul{margin:2px 0 0;padding-left:18px;font-size:.93rem}
+.win .warn{font-size:.85rem;background:#fff4d6;border-radius:8px;padding:6px 9px;color:#6b4e00}
+.win .vote{margin-top:auto}
+.win.hidden-rank .place{visibility:hidden}
+.win.voted{outline:3px solid var(--accent);outline-offset:2px}
+.juryline{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:8px 0 12px}
+@media print{
+  header.top,.foot,nav,.btn,.chips,footer{display:none!important}
+  section.st{display:none!important}
+  section.st.on{display:block!important}
+  body{background:#fff}
+  .kodex textarea{border:0;min-height:0}
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="topin"><span class="brand">🌱 Nachhaltig konsumieren</span><nav id="nav" aria-label="Stationen"></nav></div>
+  <div class="bar"><div id="bar"></div></div>
+</header>
+
+<main class="wrap">
+
+<!-- ================= START ================= -->
+<section class="st" id="start" data-nav="Start">
+  <div class="hero">
+    <div>
+      <p class="eyebrow">Wirtschaft und Recht · Jahrgangsstufe 10 · Ökonomisches Handeln auf dem Markt</p>
+      <h1>Jeder Kauf ist eine Abstimmung.</h1>
+      <p class="lead" style="margin-top:14px">Wie können Verbraucherinnen und Verbraucher – und Unternehmen – verantwortungsvoll handeln? In acht Stationen lernst du die <b>Ziele</b> nachhaltiger Entwicklung und die <b>Strategien</b> kennen, mit denen man sie erreichen will. Du prüfst echte Unternehmen, entlarvst Greenwashing und schreibst am Ende deinen eigenen Konsum-Kodex.</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>1 Mio. t</b><span>Textilien landen in Deutschland jedes Jahr in der Kleidersammlung.</span></div>
+      <div class="stat"><b>1.134</b><span>Tote beim Einsturz der Textilfabrik Rana Plaza in Bangladesch (2013).</span></div>
+      <div class="stat"><b>4 von 5</b><span>Firmen haben laut Luisa Neubauer Klimaziele – aber keinen Plan, wie sie sie erreichen.</span></div>
+      <div class="stat"><b>75 %</b><span>der Verbraucher:innen in Deutschland achten nach eigener Aussage auf Umweltaspekte (McKinsey 2020).</span></div>
+    </div>
+  </div>
+
+  <h2>Deine Ausgangsposition</h2>
+  <p class="prose">Bevor es losgeht: Wie siehst du das? Stelle den Regler ein. Am Ende der Lernstrecke fragen wir noch einmal – dann kannst du vergleichen, ob sich deine Meinung verändert hat.</p>
+  <div id="pos-before"></div>
+
+  <h2>Deine Lernstrecke</h2>
+  <div class="route" id="route"></div>
+
+  <div class="box tipp"><h4>🔎 So arbeitest du</h4>
+    <p>Bearbeite die Stationen der Reihe nach. Aufgaben stehen in Kästen mit rotem Rand, Merksätze in gelben Kästen. Deine Eingaben werden in diesem Browser gespeichert. Den Kodex am Ende kannst du ausdrucken oder als PDF speichern.</p>
+  </div>
+</section>
+
+<!-- ================= 1 DIMENSIONEN ================= -->
+<section class="st" id="dim" data-nav="1 Dimensionen" data-sub="Ökologie, Ökonomie, Soziales – und wie sie zusammenhängen">
+  <div class="sthead"><p class="eyebrow">Station 1</p><h1>Was heißt eigentlich „nachhaltig“?</h1><p class="lead">Nachhaltig ist, was die Bedürfnisse der Menschen heute erfüllt, ohne die Möglichkeiten künftiger Generationen zu gefährden. Dabei geht es nicht nur um die Umwelt.</p></div>
+
+  <div class="tri">
+    <svg viewBox="0 0 400 360" role="img" aria-label="Nachhaltigkeitsdreieck mit den Dimensionen Ökologie, Ökonomie und Soziales">
+      <polygon points="200,40 360,320 40,320" fill="#efe9dc" stroke="#cfc4ad" stroke-width="2"/>
+      <text x="200" y="215" text-anchor="middle" font-family="Fraunces,Georgia,serif" font-weight="800" font-size="22" fill="#1e2a23">nachhaltige</text>
+      <text x="200" y="242" text-anchor="middle" font-family="Fraunces,Georgia,serif" font-weight="800" font-size="22" fill="#1e2a23">Entwicklung</text>
+      <g class="corner" data-k="oeko" tabindex="0"><circle cx="200" cy="44" r="40" fill="#2f7d4a"/><text x="200" y="49" text-anchor="middle" fill="#fff" font-weight="700" font-size="14" font-family="Source Sans 3,sans-serif">Ökologie</text></g>
+      <g class="corner" data-k="wirt" tabindex="0"><circle cx="350" cy="314" r="40" fill="#2b5d9b"/><text x="350" y="319" text-anchor="middle" fill="#fff" font-weight="700" font-size="14" font-family="Source Sans 3,sans-serif">Ökonomie</text></g>
+      <g class="corner" data-k="soz" tabindex="0"><circle cx="50" cy="314" r="40" fill="#c0532a"/><text x="50" y="319" text-anchor="middle" fill="#fff" font-weight="700" font-size="14" font-family="Source Sans 3,sans-serif">Soziales</text></g>
+    </svg>
+    <div class="triinfo card" id="triinfo"><p class="muted" style="margin:0">👆 Klicke auf eine Ecke des Dreiecks.</p></div>
+  </div>
+
+  <div class="box merk"><h4>💡 Merke: Drei Dimensionen der Nachhaltigkeit</h4>
+    <p>Nachhaltiger Konsum berücksichtigt gleichzeitig die <b>ökologische</b> (Umwelt schützen), die <b>ökonomische</b> (dauerhaft tragfähig wirtschaften) und die <b>soziale</b> Dimension (gerechte Lebens- und Arbeitsbedingungen). Viele Maßnahmen berühren mehrere Dimensionen: Wer repariert, spart Geld <i>und</i> Rohstoffe.</p>
+  </div>
+
+  <div class="box auf"><h4>✏️ Aufgabe 1 – Ordne zu</h4>
+    <p>Welche Dimension steht bei diesen Beispielen aus dem Material <b>im Vordergrund</b>? Klicke auf die passende Dimension.</p>
+    <div class="sort" data-sort="dim"></div>
+  </div>
+
+  <h2>Wenn Ziele sich in die Quere kommen</h2>
+  <p class="prose">Die drei Dimensionen ziehen nicht immer an einem Strang. Ein Unternehmen will billig produzieren (Ökonomie), die Arbeiter:innen brauchen faire Löhne (Soziales). In der Wirtschaftslehre unterscheidet man drei Arten von <b>Zielbeziehungen</b>:</p>
+  <div class="grid3">
+    <div class="card"><span class="pill p-soz">Zielkonflikt</span><p style="margin-top:6px">Wird ein Ziel besser erreicht, leidet ein anderes. <i>Faire Löhne erhöhen die Kosten.</i></p></div>
+    <div class="card"><span class="pill p-oeko">Zielkongruenz</span><p style="margin-top:6px">Ein Ziel fördert das andere. <i>Weniger Verpackung spart Material und Kosten.</i></p></div>
+    <div class="card"><span class="pill">Zielneutralität</span><p style="margin-top:6px">Die Ziele beeinflussen sich nicht. <i>Ein Ziel ändert am anderen nichts.</i></p></div>
+  </div>
+  <div class="box auf"><h4>✏️ Aufgabe 2 – Zielbeziehungen erkennen</h4>
+    <p>Die Aussagen stammen aus der Debatte um das Lieferkettengesetz. Welche Zielbeziehung liegt vor?</p>
+    <div class="sort" data-sort="ziel"></div>
+  </div>
+</section>
+
+<!-- ================= 2 ZIELE ================= -->
+<section class="st" id="ziele" data-nav="2 Ziele" data-sub="Die 17 UN-Nachhaltigkeitsziele und die Ziele von Unternehmen">
+  <div class="sthead"><p class="eyebrow">Station 2</p><h1>Nachhaltigkeitsziele: Wohin soll es gehen?</h1><p class="lead">2015 haben alle 193 Mitgliedstaaten der Vereinten Nationen die <b>Agenda 2030</b> beschlossen. Ihr Kern sind 17 Ziele für nachhaltige Entwicklung – die <i>Sustainable Development Goals</i> (SDGs). Sie gelten für Staaten, Unternehmen und jeden Einzelnen.</p></div>
+
+  <p class="prose">Klicke auf ein Ziel. Du erfährst, was es mit deinem Konsum zu tun hat.</p>
+  <div class="sdgs" id="sdgs"></div>
+  <div class="sdginfo" id="sdginfo"><p class="muted" style="margin:0">👆 Wähle ein Ziel aus.</p></div>
+
+  <div class="box merk"><h4>💡 Merke: SDG 12 – Nachhaltige/r Konsum und Produktion</h4>
+    <p>Ziel 12 betrifft uns als Konsument:innen am direktesten. Einige Unterziele bis 2030:</p>
+    <ul>
+      <li><b>12.3</b> die Lebensmittelverschwendung pro Kopf im Handel und bei Verbraucher:innen halbieren,</li>
+      <li><b>12.5</b> das Abfallaufkommen durch Vermeidung, Verminderung, Wiederverwertung und Wiederverwendung deutlich verringern,</li>
+      <li><b>12.6</b> Unternehmen ermutigen, nachhaltige Verfahren einzuführen und darüber zu berichten,</li>
+      <li><b>12.8</b> sicherstellen, dass alle Menschen die Informationen und das Bewusstsein für eine nachhaltige Lebensweise haben.</li>
+    </ul>
+  </div>
+
+  <div class="box auf"><h4>✏️ Aufgabe 3 – Welche Ziele sind betroffen?</h4>
+    <p>Wähle bei jedem Fall die Nachhaltigkeitsziele aus, die deiner Meinung nach am stärksten betroffen sind, und klicke auf „Prüfen“.</p>
+    <div id="sdgcases"></div>
+  </div>
+
+  <h2>Ziele von Unternehmen – nur schöne Worte?</h2>
+  <p class="prose">Auch Unternehmen setzen sich Nachhaltigkeitsziele. Zalando hat zum Beispiel 32 Nachhaltigkeitskriterien formuliert. Aber ein gutes Ziel muss überprüfbar sein: Es braucht eine <b>messbare Größe</b>, einen <b>Termin</b> und <b>konkrete Maßnahmen</b>, wie es erreicht werden soll. Klimaaktivistin Luisa Neubauer kritisiert: „4 von 5 Firmen haben zwar Klimaziele – aber keinen Plan, wie sie diese Ziele erreichen wollen.“</p>
+  <div class="box auf"><h4>✏️ Aufgabe 4 – Der Ziele-Check</h4>
+    <p>Prüfe die Ziele aus den Materialien. Setze ein Häkchen, wenn das Kriterium erfüllt ist. Vergleiche danach mit dem Lösungsvorschlag.</p>
+    <div class="tablewrap"><table class="zc" id="zc"><thead><tr><th>Unternehmensziel</th><th>messbar?</th><th>Termin?</th><th>Maßnahmen genannt?</th></tr></thead><tbody></tbody></table></div>
+    <p style="margin-top:10px"><button class="btn pri" id="zcbtn">Mit Lösung vergleichen</button><span class="fb" id="zcfb"></span></p>
+  </div>
+  <div class="box tipp"><h4>🔎 Weiterdenken</h4><p>Unkonkrete Ziele wie „in allen Bereichen der Nachhaltigkeit führend sein“ klingen gut, lassen sich aber nicht überprüfen. Genau hier beginnt die Grauzone zum <b>Greenwashing</b> (Station 5).</p></div>
+</section>
+
+<!-- ================= 3 STRATEGIEN ================= -->
+<section class="st" id="strat" data-nav="3 Strategien" data-sub="Effizienz, Konsistenz, Suffizienz und Kreislaufwirtschaft">
+  <div class="sthead"><p class="eyebrow">Station 3</p><h1>Nachhaltigkeitsstrategien: Wie kommen wir ans Ziel?</h1><p class="lead">Um die Ziele zu erreichen, unterscheidet man drei Strategien. Sie setzen an ganz verschiedenen Stellen an – und funktionieren am besten zusammen.</p></div>
+
+  <div class="grid3">
+    <div class="strat eff"><h3>Effizienz</h3><p class="q">„Besser machen“</p><p>Gleiches Ergebnis mit <b>weniger</b> Rohstoffen, Energie oder Wasser. Der Verbrauch pro Produkt sinkt.</p><ul><li>sparsamere Maschinen, LED-Lampen</li><li>gebündelte Lieferungen</li><li>weniger Überproduktion</li></ul></div>
+    <div class="strat kon"><h3>Konsistenz</h3><p class="q">„Anders machen“</p><p>Produkte und Verfahren so gestalten, dass sie <b>naturverträglich</b> sind und in Kreisläufe passen. Schädliches wird durch Verträgliches ersetzt.</p><ul><li>Ökostrom statt Kohle</li><li>recycelbare Materialien, Recycling</li><li>Bio-Anbau ohne Pestizide</li></ul></div>
+    <div class="strat suf"><h3>Suffizienz</h3><p class="q">„Weniger und länger“</p><p>Das <b>eigene Verhalten</b> ändern: Brauche ich das wirklich? Dinge länger nutzen, teilen, leihen, gebraucht kaufen – oder ganz verzichten.</p><ul><li>Second Hand, Tauschen, Leihen</li><li>Reparieren statt neu kaufen</li><li>Impulskäufe vermeiden</li></ul></div>
+  </div>
+
+  <div class="box merk"><h4>💡 Merke: Der Rebound-Effekt</h4>
+    <p>Effizienz allein reicht oft nicht. Werden Produkte sparsamer und billiger, nutzt man sie häufig <b>mehr</b> – die Einsparung wird ganz oder teilweise „aufgefressen“. Beispiel: Ein sparsameres Auto verleitet dazu, öfter zu fahren. Deshalb braucht es neben Effizienz und Konsistenz auch <b>Suffizienz</b>.</p>
+  </div>
+
+  <div class="box auf"><h4>✏️ Aufgabe 5 – Strategien zuordnen</h4>
+    <p>Welche Strategie verfolgen die Maßnahmen aus den Unternehmens-Präsentationen? Klicke auf die passende Strategie.</p>
+    <div class="sort" data-sort="strat"></div>
+  </div>
+
+  <h2>Kreislaufwirtschaft: Der Weg der Gebrauchtkleidung</h2>
+  <p class="prose">Second-Hand-Anbieter wie Vinted, Sellpy oder der VAUDE Second Hand Shop setzen auf die <b>Kreislaufwirtschaft</b>: Produkte sollen möglichst lange genutzt werden, bevor sie zu Müll werden. Doch was passiert mit der Kleidung im Container? Klicke dich durch die Stationen (nach FairWertung e. V.):</p>
+  <div class="flow" id="flow"></div>
+  <div class="flowinfo" id="flowinfo"></div>
+
+  <div class="box auf"><h4>✏️ Aufgabe 6 – Die Abfallhierarchie</h4>
+    <p>Nicht jede Form von „Kreislauf“ ist gleich gut. Bringe die Möglichkeiten in die richtige Reihenfolge: <b>oben das Beste</b> für Umwelt und Ressourcen, unten das Schlechteste.</p>
+    <ol class="rank" id="rank"></ol>
+    <button class="btn pri" id="rankbtn">Prüfen</button><span class="fb" id="rankfb"></span>
+  </div>
+</section>
+
+<!-- ================= 4 UNTERNEHMEN ================= -->
+<section class="st" id="firmen" data-nav="4 Unternehmen" data-sub="Vaude, Zalando, Armedangels & Second-Hand-Plattformen">
+  <div class="sthead"><p class="eyebrow">Station 4</p><h1>Unternehmen unter der Lupe</h1><p class="lead">Viele Anbieter werben heute mit Nachhaltigkeit: mit gebrauchter Ware, fairer Produktion oder Recycling. Wähle ein Unternehmen, lies seine Maßnahmen und bewerte es selbst.</p></div>
+
+  <div class="firms" id="firms"></div>
+  <div class="firm" id="firm"></div>
+
+  <div class="box auf"><h4>✏️ Aufgabe 7 – Anbieter-Analyse</h4>
+    <ol>
+      <li>Prüfe die farbigen Zuordnungen der Maßnahmen zu Dimensionen und Strategien: Stimmst du zu? Wo würdest du anders zuordnen – und warum?</li>
+      <li>Bewerte das Unternehmen mit den Schiebereglern im <b>Nachhaltigkeits-Radar</b> und begründe deine Bewertung.</li>
+      <li>Vergleiche zwei Unternehmen: Welches ist überzeugender? Wo bist du skeptisch?</li>
+    </ol>
+  </div>
+
+  <details class="acc"><summary>📋 Leitfragen für eure Präsentation (aus dem Arbeitsauftrag)</summary>
+    <p><b>Wirtschaft:</b></p><ol><li>Wie trägt der Anbieter zur Reduzierung von Produktions- und Konsumkosten bei?</li><li>Welche wirtschaftlichen Vorteile hat nachhaltiger Konsum für Endverbraucher:innen?</li><li>Wie beeinflusst nachhaltiger Konsum Kaufverhalten und Marktnachfrage?</li><li>Welche Herausforderungen haben nachhaltige Anbieter gegenüber konventionellen?</li><li>Welche Geschäftsmodelle verfolgen sie, um wirtschaftlich erfolgreich zu sein?</li></ol>
+    <p><b>Ökologie:</b></p><ol><li>Wie trägt der Anbieter zur Reduktion von Abfall und Ressourcenverbrauch bei?</li><li>Welche Maßnahmen ergreift er, um den CO₂-Ausstoß zu verringern?</li><li>Wie beeinflusst er den ökologischen Fußabdruck der Verbraucher:innen?</li><li>Welche Rolle spielt er in der Kreislaufwirtschaft?</li><li>Nutzt er innovative ökologische Technologien oder Materialien?</li></ol>
+    <p><b>Soziales:</b></p><ol><li>Wie sorgt er für faire Arbeitsbedingungen und Löhne entlang der Lieferkette?</li><li>Was tut er gegen Diskriminierung und Ausbeutung?</li><li>Wie fördert er Gleichberechtigung im Unternehmen und bei Zulieferern?</li><li>Gibt es Programme mit sozialem Mehrwert?</li><li>Wie transparent ist er bei sozialen und ethischen Standards (Zertifikate, Berichte)?</li></ol>
+  </details>
+  <div class="box tipp"><h4>🔎 Kritisch bleiben</h4><p>Die Angaben stammen größtenteils aus Selbstdarstellungen der Unternehmen. Frage immer: <b>Wer sagt das? Gibt es Belege oder unabhängige Prüfungen?</b> Wie man geschönte Darstellungen erkennt, lernst du in Station 5.</p></div>
+</section>
+
+<!-- ================= 5 GREENWASHING ================= -->
+<section class="st" id="gw" data-nav="5 Greenwashing" data-sub="Faking or making it? Grüne Fassaden erkennen">
+  <div class="sthead"><p class="eyebrow">Station 5</p><h1>Greenwashing: Die grüne Fassade</h1><p class="lead">Je wichtiger Nachhaltigkeit für Kaufentscheidungen wird, desto größer ist die Versuchung, sich grüner darzustellen, als man ist.</p></div>
+
+  <div class="grid2">
+    <div class="box merk" style="margin:0"><h4>💡 Merke: Greenwashing</h4><p><b>Greenwashing</b> („grünwaschen“) ist der Versuch von Unternehmen, sich durch Werbung, PR oder Siegel als besonders umweltfreundlich darzustellen, obwohl ihre Geschäftstätigkeit nicht oder nur oberflächlich nachhaltig ausgerichtet ist.</p></div>
+    <div class="card"><p class="eyebrow">Woher kommt der Begriff?</p><p style="margin-top:6px">Mitte der 1980er-Jahre bemerkte der Umweltschützer Jay Westerveld in einem Hotel auf den Fidschi-Inseln: Die Gäste sollten Handtücher mehrmals benutzen – angeblich, um ein Korallenriff zu schützen. Mit dem gesparten Geld baute das Hotel seine Anlage aber immer näher an genau dieses Riff. Der Begriff verbindet „whitewashing“ (beschönigen) und „green“.</p></div>
+  </div>
+
+  <h2>Die Tricks der Greenwasher</h2>
+  <div class="grid2" id="gwstrat"></div>
+  <p class="quelle">Nach: Landeszentrale für politische Bildung Baden-Württemberg (lpb-bw.de/greenwashing)</p>
+
+  <div class="box auf"><h4>✏️ Aufgabe 8 – Der Greenwashing-Detektor</h4>
+    <p>Welche Strategie steckt dahinter? Oder ist alles in Ordnung?</p>
+    <div class="sort" data-sort="gw"></div>
+  </div>
+
+  <h2>Der große Greenwashing-Check</h2>
+  <div class="gw-ad">
+    <figure>
+      <img src="McDonalds_Kampagne_Verpackungen_2023-3003061248.jpg" alt="Werbeplakat von McDonald's (2023): zerknüllter Pappbecher mit dem Text „I am beautiful – weil aus mir ein Buch werden kann“" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'card',textContent:'Bild nicht gefunden: Die Datei „McDonalds_Kampagne_Verpackungen_2023-3003061248.jpg“ muss im selben Ordner liegen wie diese Seite.'}))">
+      <figcaption>McDonald's-Kampagne „I am beautiful“ (2023). Slogan: „Es braucht nicht viel. Es braucht viele.“</figcaption>
+    </figure>
+    <div>
+      <h3 style="margin-top:0">McDonald's: „I am beautiful“</h3>
+      <p>Leere Becher und Pommesboxen werden zu „Nachhaltigkeits-Botschaftern“: Gäste sollen Verpackungen richtig entsorgen, damit aus den Bechern Papier für Happy-Meal-Bücher wird. Klicke auf die Werbeaussagen und sieh dir die Kritik an:</p>
+      <div id="mcd"></div>
+    </div>
+  </div>
+  <h3>H&amp;M: „Conscious Choice“</h3>
+  <p class="prose">H&amp;M kennzeichnet einen Teil seiner Kleidung mit einem grünen Etikett und wirbt mit recyceltem Polyester. Das Unternehmen sagt: „Nachhaltigkeit ist kein Marketinginstrument, sondern ein Teil dessen, was wir als Unternehmen sind.“</p>
+  <div id="hm"></div>
+
+  <div class="box merk"><h4>💡 Merke: Folgen von Greenwashing</h4>
+    <ol><li>Das <b>Vertrauen</b> in Unternehmen sinkt.</li><li>Unternehmen werden manchmal <b>zu Unrecht</b> beschuldigt.</li><li><b>Wettbewerbsverzerrung:</b> Wirklich umweltfreundliche Unternehmen werden schlechter gestellt.</li><li>Der <b>Umwelt</b> wird geschadet, weil Verbraucher:innen glauben, Gutes zu tun, aber wenig nachhaltige Produkte kaufen.</li><li>Ertappte Unternehmen erleiden <b>Image- und Reputationsverlust</b>.</li></ol>
+  </div>
+
+  <div class="box aktuell"><h4>⚖️ Aktuell: Was die EU gegen Greenwashing tut</h4>
+    <p>Seit dem <b>27. September 2026</b> gelten in der EU die neuen Regeln der Richtlinie (EU) 2024/825 (umgesetzt im Gesetz gegen den unlauteren Wettbewerb). Seitdem verboten sind unter anderem:</p>
+    <ul><li>allgemeine Umweltaussagen wie „umweltfreundlich“ oder „grün“ ohne anerkannten Nachweis,</li><li>Nachhaltigkeitssiegel, die nicht auf einem Zertifizierungssystem beruhen oder nicht von staatlichen Stellen festgesetzt wurden,</li><li>die Aussage, ein Produkt sei „klimaneutral“, wenn das nur durch Kompensationsprojekte erreicht wird.</li></ul>
+    <p><b>Pro:</b> mehr Transparenz und Schutz für Verbraucher:innen, fairer Wettbewerb. <b>Contra:</b> mehr Aufwand und Bürokratie, Nachweise sind teuer – besonders für kleine Unternehmen.</p>
+  </div>
+  <div class="box auf"><h4>✏️ Aufgabe 9 – Blogpost</h4><p>Sind EU-Regeln die geeignete Lösung gegen Greenwashing? Verfasse einen kurzen Blogpost (ca. 150 Wörter), in dem du die Sicht der Verbraucher:innen und der Unternehmen abwägst und zu einem begründeten Urteil kommst.</p></div>
+</section>
+
+<!-- ================= 6 SIEGEL ================= -->
+<section class="st" id="siegel" data-nav="6 Siegel" data-sub="Fairtrade, Bio, Blauer Engel & Co. – wie glaubwürdig sind sie?">
+  <div class="sthead"><p class="eyebrow">Station 6</p><h1>Siegel-Check: Orientierung oder Verwirrung?</h1><p class="lead">Gütesiegel sollen helfen, nachhaltige Produkte schnell zu erkennen. Aber es gibt Hunderte davon – und nicht alle halten, was sie versprechen.</p></div>
+
+  <p class="prose">Klicke auf eine Karte, um Vor- und Nachteile zu sehen.</p>
+  <div class="grid3" id="labels"></div>
+
+  <div class="box merk"><h4>💡 Merke: Ein glaubwürdiges Siegel erkennst du daran, dass …</h4>
+    <ol><li>es von einer <b>unabhängigen Stelle</b> (Staat oder Nichtregierungsorganisation) vergeben wird – nicht vom Hersteller selbst,</li><li>es <b>regelmäßig unabhängig kontrolliert</b> wird,</li><li>seine <b>Kriterien öffentlich</b> nachlesbar sind.</li></ol>
+    <p>Recherchehilfen: <a href="https://www.siegelklarheit.de" target="_blank" rel="noopener">siegelklarheit.de</a>, <a href="https://label-online.de" target="_blank" rel="noopener">label-online.de</a></p>
+  </div>
+
+  <div class="box auf"><h4>✏️ Aufgabe 10 – Prüfe die Siegel</h4>
+    <p>Diese Siegel sind erfunden. Prüfe sie mit den drei Kriterien und fälle ein Urteil.</p>
+    <div class="lab" id="labcases"></div>
+  </div>
+
+  <h2>Grenzen von Siegeln</h2>
+  <div class="grid2">
+    <div class="card"><ul style="margin:0;padding-left:18px">
+      <li><b>Unübersichtlichkeit:</b> Die Masse an Siegeln sorgt eher für Verwirrung.</li>
+      <li><b>Begrenzte Aussagekraft:</b> Viele decken nur einen Teil ab (Bio sagt nichts über Löhne).</li>
+      <li><b>Komplexität:</b> Kriterien sind schwer nachvollziehbar.</li>
+      <li><b>Mangelnde Vergleichbarkeit</b> unterschiedlicher Standards.</li>
+      <li><b>Greenwashing</b> durch selektiven Einsatz.</li></ul></div>
+    <div class="card"><ul style="margin:0;padding-left:18px">
+      <li><b>Kosten:</b> Zertifizierungen sind teuer und verteuern Produkte.</li>
+      <li><b>Begrenzte Kontrolle</b> in komplexen globalen Lieferketten.</li>
+      <li><b>Inflation:</b> Je mehr Siegel, desto weniger zählt das einzelne.</li>
+      <li><b>Trägheit:</b> Siegel reagieren langsam auf neue Erkenntnisse.</li>
+      <li><b>Einzelprodukte:</b> Oft wird nur ein Produkt geprüft, nicht das ganze Unternehmen.</li></ul></div>
+  </div>
+</section>
+
+<!-- ================= 7 LIEFERKETTE ================= -->
+<section class="st" id="lk" data-nav="7 Lieferkette" data-sub="Verantwortung bis zum Anfang: das Lieferkettengesetz">
+  <div class="sthead"><p class="eyebrow">Station 7</p><h1>Echt fair? Verantwortung in der Lieferkette</h1><p class="lead">Ein T-Shirt reist oft um die halbe Welt, bevor es bei dir im Schrank landet. Wer ist verantwortlich, wenn am Anfang der Kette Menschen ausgebeutet werden?</p></div>
+
+  <div class="chain">
+    <div class="node">🌱 Rohstoff<small>Baumwollfeld, Mine</small></div><span class="arr">→</span>
+    <div class="node">🧵 Verarbeitung<small>Spinnerei, Färberei</small></div><span class="arr">→</span>
+    <div class="node">🏭 Fabrik<small>Näherei</small></div><span class="arr">→</span>
+    <div class="node">🚢 Transport<small>Schiff, Lkw</small></div><span class="arr">→</span>
+    <div class="node">🏬 Handel<small>Laden, Onlineshop</small></div><span class="arr">→</span>
+    <div class="node">🧍 Du<small>Konsument:in</small></div>
+  </div>
+
+  <h2>Wenn es am Anfang der Kette schiefgeht</h2>
+  <p class="prose">Bei einer Protestaktion vor dem Reichstag erinnerten Grabsteine an diese Ereignisse. Klicke auf eine Karte für mehr Informationen.</p>
+  <div class="grid2" id="disasters"></div>
+
+  <div class="box merk"><h4>💡 Merke: Das Lieferkettengesetz (LkSG)</h4>
+    <p>Weil freiwilliges Engagement der Unternehmen nicht ausreichte, beschloss der Bundestag 2021 das <b>Lieferkettensorgfaltspflichtengesetz</b>. Es gilt seit 2023 für Unternehmen mit mindestens 3.000, seit 2024 mit mindestens 1.000 Beschäftigten in Deutschland. Sie müssen im eigenen Geschäftsbereich und bei ihren direkten Zulieferern u. a.:</p>
+    <ul><li>Risiken für Menschenrechte und Umwelt analysieren,</li><li>vorbeugende Maßnahmen und Abhilfe ergreifen,</li><li>ein Beschwerdeverfahren einrichten,</li><li>ihr Vorgehen dokumentieren.</li></ul>
+    <p>Es geht nicht darum, überall deutsche Sozialstandards durchzusetzen, sondern grundlegende Menschenrechte wie das Verbot von Kinder- und Zwangsarbeit.</p>
+  </div>
+
+  <div class="box auf"><h4>✏️ Aufgabe 11 – Pro oder Contra?</h4>
+    <p>Spricht das Argument <b>für</b> oder <b>gegen</b> ein Lieferkettengesetz?</p>
+    <div class="sort" data-sort="lk"></div>
+  </div>
+
+  <h2>Gut gemeint = gut gemacht?</h2>
+  <p class="prose">Das Institut der deutschen Wirtschaft (iwd, 2024) hat Unternehmen befragt, wie sie auf das Gesetz reagiert haben. Ein Blick auf die Bekleidungsbranche zeigt: In manchen Lieferländern verlieren Menschen ihren Job, statt bessere Arbeitsbedingungen zu bekommen.</p>
+  <div class="bars">
+    <div class="r"><span>mehr bei Lieferanten aus Ländern mit guten Arbeitsbedingungen bestellt</span><div class="t"><div style="width:13%"></div></div><span class="v">≈ 13 %</span></div>
+    <div class="r"><span>Produktpreise erhöht</span><div class="t"><div style="width:13%"></div></div><span class="v">≈ 13 %</span></div>
+    <div class="r"><span>Großbetriebe: Rückzug aus Ländern mit schwacher Regierungsführung (erfolgt/geplant)</span><div class="t"><div style="width:10%"></div></div><span class="v">10 %</span></div>
+    <div class="r"><span>kleine und mittlere Betriebe: Rückzug (erfolgt/geplant)</span><div class="t"><div style="width:7%"></div></div><span class="v">7 %</span></div>
+  </div>
+  <p class="quelle">Quelle: iwd, „Lieferkettengesetz: Gut gemeint ist nicht gut gemacht“, 27.06.2024 (Anteil der Betriebe in Deutschland)</p>
+
+  <div class="box aktuell"><h4>⚖️ Aktuell: Die Regeln werden überarbeitet</h4>
+    <p>Die Materialien stammen aus dem Jahr 2024. Seitdem hat sich viel getan: Die EU hat ihre Lieferkettenrichtlinie (CSDDD) im Februar 2026 mit dem Vereinfachungspaket „Omnibus I“ deutlich abgeschwächt. Sie soll nur noch für sehr große Unternehmen gelten (mehr als 5.000 Beschäftigte und über 1,5 Mrd. € Umsatz). Die Bundesregierung will das deutsche LkSG durch ein neues Gesetz ersetzen und die Berichtspflicht abschaffen. <b>Recherchiert den aktuellen Stand!</b></p>
+  </div>
+
+  <h2>Und du?</h2>
+  <div class="box auf"><h4>✏️ Aufgabe 12 – Positionslinie</h4>
+    <p>Wie stehst du zu diesen Aussagen? 1 = stimme gar nicht zu, 5 = stimme voll zu. Begründe deine Position im Gespräch mit deinem Sitznachbarn.</p>
+    <div id="lkpos"></div>
+  </div>
+</section>
+
+<!-- ================= 8 SIA ================= -->
+<section class="st" id="sia" data-nav="8 SIA-Award" data-sub="Die Gewinner des Sustainable Impact Award 2026">
+  <div class="sthead"><p class="eyebrow">Station 8 · ganz aktuell</p><h1>Ausgezeichnet nachhaltig? Der Sustainable Impact Award 2026</h1><p class="lead">Am 13. Oktober 2026 wurden in Berlin die Gewinner des <b>Sustainable Impact Award</b> (SIA) ausgezeichnet. Wie sieht Nachhaltigkeit bei den Preisträgern konkret aus – und wie glaubwürdig ist so ein Preis?</p></div>
+
+  <div class="sia-hero">
+    <div class="prose">
+      <p>Mit dem SIA zeichnet die <b>WirtschaftsWoche</b> mittelständische Unternehmen in Deutschland aus, die als Vorreiter für nachhaltige Geschäftsmodelle und gesellschaftliche Verantwortung gelten. Partner sind der Versicherer Generali (Hauptsponsor) und der Kaffeeröster Lavazza. 2026 wurde der Preis zum sechsten Mal vergeben.</p>
+      <p>Es gibt vier Kategorien: zwei Hauptkategorien für etablierte Mittelständler (mind. 5 Jahre am Markt, 50 bis 10.000 Beschäftigte, bis 2,5 Mrd. € Umsatz) und zwei Sonderpreise für kleine Unternehmen (30–250 Beschäftigte) und Start-ups (bis 30 Beschäftigte, höchstens 3 Jahre am Markt).</p>
+    </div>
+    <div class="sia-facts">
+      <div><b>13.10.2026</b><span>Preisverleihung in Berlin</span></div>
+      <div><b>4</b><span>Kategorien mit je drei Plätzen</span></div>
+      <div><b>12</b><span>ausgezeichnete Unternehmen</span></div>
+      <div><b>6.</b><span>Ausgabe des Preises</span></div>
+    </div>
+  </div>
+
+  <h2>So wird bewertet</h2>
+  <div class="steps">
+    <div><b>Bewerbung</b>Die Unternehmen beantworten einen Fragebogen zu Strategie, konkreten Maßnahmen und <i>messbaren Ergebnissen</i> und können Belege und Kennzahlen beifügen.</div>
+    <div><b>Pre-Screening</b>Ein wissenschaftlicher Partner bewertet alle Angaben nach einem einheitlichen Kriterienkatalog: <i>Wirkung, Nachvollziehbarkeit und Substanz</i>.</div>
+    <div><b>Shortlist</b>Je Kategorie werden die überzeugendsten Unternehmen ausgewählt.</div>
+    <div><b>Vertiefung &amp; Jury</b>Die Kandidaten beschreiben Ergebnisse, Hürden und nächste Schritte. Eine Jury aus Wirtschaft, Wissenschaft und Medien entscheidet.</div>
+  </div>
+  <div class="box tipp"><h4>🔎 Verbindung zu Station 2</h4><p>Reine Projektideen werden nicht berücksichtigt – gefordert ist ein <b>Projektcontrolling</b> mit messbaren Ergebnissen. Das entspricht genau den Kriterien aus dem Ziele-Check: messbar, terminiert, mit konkreten Maßnahmen.</p></div>
+
+  <h2>Die Gewinner 2026</h2>
+  <div class="juryline"><label style="display:flex;gap:8px;align-items:center;font-weight:700"><input type="checkbox" id="jurymode" style="width:20px;height:20px;accent-color:var(--accent)"> Jury-Modus: Platzierungen verbergen</label><span class="muted" style="font-size:.9rem">Wähle selbst deinen Sieger und vergleiche dann mit der echten Jury.</span></div>
+  <div class="cats" id="siacats"></div>
+  <p class="catdesc" id="siacatdesc"></p>
+  <div class="podium" id="podium"></div>
+  <p class="quelle" style="margin-top:8px">Quellen: sia-award.de/gewinner-2026 und WirtschaftsWoche, „Diese vier Unternehmen zeigen, dass sich Ökonomie und Ökologie nicht ausschließen“, 14.10.2026. Die Zuordnung zu Strategien und Dimensionen ist eine Einschätzung für den Unterricht.</p>
+
+  <div class="box auf"><h4>✏️ Aufgabe 13 – Welche Strategie verfolgen die Preisträger?</h4>
+    <p>Ordne die Maßnahmen der Gewinner den Nachhaltigkeitsstrategien aus Station 3 zu.</p>
+    <div class="sort" data-sort="sia"></div>
+  </div>
+  <div class="box merk"><h4>💡 Auffällig: Konsistenz dominiert</h4>
+    <p>Fast alle Preisträger setzen auf <b>Konsistenz</b> (bessere Materialien, Recycling, Kreisläufe) oder <b>Effizienz</b>. <b>Suffizienz</b> – also weniger zu verkaufen – kommt kaum vor. Kein Wunder: Unternehmen verdienen ihr Geld mit dem Verkauf. Suffizienz bleibt deshalb vor allem eine Aufgabe für uns als Konsument:innen.</p>
+  </div>
+
+  <div class="box auf"><h4>✏️ Aufgabe 14 – Bezüge herstellen</h4>
+    <ol>
+      <li><b>Textilbranche:</b> re.solution recycelt Polyester aus Mischgeweben, VANDEYK entwickelt PFAS-freie Beschichtungen. Welche Probleme aus Station 5 (H&amp;M, recyceltes Polyester) und Station 4 (VAUDE) könnten diese Innovationen lösen?</li>
+      <li><b>Nachhaltigkeitsziele:</b> Ordne jedem Erstplatzierten das SDG zu, zu dem er am meisten beiträgt (Station 2). Begründe.</li>
+      <li><b>Dimensionen:</b> NOKERA spart laut der Wohnungsbaugesellschaft SWSG rund 30 % Baukosten, die Mieten sollen ein Drittel unter dem örtlichen Durchschnitt liegen. Welche Dimensionen der Nachhaltigkeit werden hier gleichzeitig erreicht? Liegt Zielkongruenz vor?</li>
+    </ol>
+  </div>
+
+  <div class="box auf"><h4>✏️ Aufgabe 15 – Wie glaubwürdig ist der Preis?</h4>
+    <p>Prüfe den SIA wie ein Siegel (Station 6) mit den drei Kriterien und beziehe Stellung:</p>
+    <div class="lab" id="siacheck"></div>
+  </div>
+  <details class="acc"><summary>💡 Lösungshinweise zu Aufgabe 15</summary>
+    <ul>
+      <li><b>Unabhängigkeit:</b> Die Jury kommt laut Veranstalter aus Wirtschaft, Wissenschaft und Medien, die Vorprüfung macht ein wissenschaftlicher Partner. Aber: Veranstalter ist ein Wirtschaftsmagazin, Sponsoren sind Unternehmen, und die Teilnahme bringt den Preisträgern Werbung. → <i>teilweise</i></li>
+      <li><b>Kontrolle:</b> Die Angaben werden nach einem Kriterienkatalog geprüft und müssen messbar sein; eine Kontrolle vor Ort wird nicht beschrieben. Die Webseite nennt bei einigen Gewinnern (z. B. Werner Schmid, KNAUER) gar keine konkreten Nachhaltigkeitsmaßnahmen. → <i>teilweise</i></li>
+      <li><b>Kriterien öffentlich:</b> Wirkung, Nachvollziehbarkeit und Substanz werden genannt, die Gewichtung und der Kriterienkatalog aber nicht. → <i>teilweise</i></li>
+      <li><b>Fazit:</b> Ein Preis ist ein Hinweis, kein Beweis. Er zeigt gute Beispiele, ersetzt aber nicht den eigenen kritischen Blick.</li>
+    </ul>
+  </details>
+
+  <h3>Zum Vergleich: die Erstplatzierten 2025</h3>
+  <p class="prose">2025 hießen die Kategorien noch anders. Gewonnen haben u. a. <b>CWS Workwear</b> (Berufskleidung zum Mieten im Kreislaufmodell), <b>Cornelsen</b> (Entfernung von PFAS-„Ewigkeitschemikalien“ aus Wasser und Böden), <b>Feralpi</b> (Baustahl aus Schrott im Elektrolichtbogenofen in Riesa), das Start-up <b>Abnoba</b> (KI-Sortierung für das Recycling) und <b>ELSCHUKOM</b> (Feindrähte, Neubau im Effizienzhaus-40-plus-Standard mit Solarstrom). Auf Platz 3 bei den Start-ups: <b>Boomerang</b> aus Hamburg mit Mehrweg-Versandverpackungen, die bis zu 50-mal genutzt werden können.</p>
+</section>
+
+<!-- ================= KODEX ================= -->
+<section class="st" id="kodex" data-nav="Mein Kodex" data-sub="Abschlusstest und dein persönlicher Konsum-Kodex">
+  <div class="sthead"><p class="eyebrow">Abschluss</p><h1>Mein Konsum-Kodex</h1><p class="lead">Du kennst jetzt Ziele, Strategien und Fallstricke. Zeit für dein Fazit: Was nimmst du dir konkret vor?</p></div>
+
+  <h2>Abschlusstest</h2>
+  <div class="box"><div id="quiz"></div></div>
+
+  <h2>Mein Konsum-Kodex</h2>
+  <p class="prose">Formuliere konkrete Regeln in der Ich-Form („Ich …“). Die Vorschläge kannst du anklicken und anpassen. Deine Eingaben werden automatisch gespeichert.</p>
+  <p><label>Name: <input id="kname" style="font:inherit;padding:4px 8px;border:1px solid var(--line);border-radius:8px;width:min(260px,100%)"></label></p>
+  <div class="kodex" id="kodexbox"></div>
+  <p style="margin-top:12px"><button class="btn pri" onclick="window.print()">🖨️ Kodex drucken / als PDF speichern</button></p>
+
+  <h2>Hat sich deine Meinung verändert?</h2>
+  <div id="pos-after"></div>
+  <div id="poscompare" class="compare"></div>
+</section>
+
+</main>
+<footer>Erstellt aus den Unterrichtsmaterialien „Nachhaltigkeit beim Konsum“ (u. a. Joachim Herz Stiftung / RAABE: „Faking or making it“ und „Echt fair!“; FairWertung e. V.: „Der Weg der Gebrauchtkleidung“; iwd 2024; Unternehmensdarstellungen von VAUDE, Zalando, Armedangels, Vinted, Sellpy, Kleinanzeigen und momox). Unternehmensangaben beruhen auf Selbstdarstellungen und Schülerpräsentationen.</footer>
+
+<script>
+'use strict';
+const $=(s,r=document)=>r.querySelector(s);
+const $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const el=(t,c,h)=>{const e=document.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;return e;};
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const store={get(k,d){try{const v=localStorage.getItem('konsum:'+k);return v==null?d:JSON.parse(v);}catch(e){return d;}},set(k,v){try{localStorage.setItem('konsum:'+k,JSON.stringify(v));}catch(e){}}};
+const shuffle=a=>{a=[...a];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;};
+
+/* ---------- Sortieraufgaben ---------- */
+const CAT={
+  oeko:{l:'Ökologie',c:'p-oeko'},wirt:{l:'Ökonomie',c:'p-wirt'},soz:{l:'Soziales',c:'p-soz'},
+  eff:{l:'Effizienz',c:'p-eff'},kon:{l:'Konsistenz',c:'p-kon'},suf:{l:'Suffizienz',c:'p-suf'},
+  konf:{l:'Zielkonflikt'},kong:{l:'Zielkongruenz'},neut:{l:'Zielneutralität'},
+  pro:{l:'Pro Gesetz'},contra:{l:'Contra Gesetz'},
+  g1:{l:'Irreführende Begriffe'},g2:{l:'Selbstverständlichkeit'},g3:{l:'Fragwürdiges Siegel'},g4:{l:'Grüne Bildsprache'},g5:{l:'Leuchtturm-Produkt'},g0:{l:'Kein Greenwashing erkennbar'}
+};
+const SORTS={
+  dim:{cats:['oeko','wirt','soz'],items:[
+    ['Bioprodukte ohne Spritzmittel','oeko','Kein Pestizideinsatz schützt Böden, Wasser und Artenvielfalt.'],
+    ['Verleih von Verkehrsmitteln statt eigenem Auto','wirt','Teilen spart Geld und nutzt vorhandene Güter effizient (auch ökologisch sinnvoll).'],
+    ['Sicherung regionaler Arbeitsplätze','soz','Es geht um Einkommen und Teilhabe der Menschen vor Ort.'],
+    ['Reparieren statt wegwerfen','wirt','Reparieren spart Geld – und zugleich Rohstoffe. Beide Dimensionen sind vertretbar.','oeko'],
+    ['Faire Löhne in der Textilfabrik','soz','Gerechte Arbeitsbedingungen sind der Kern der sozialen Dimension.'],
+    ['CO₂-Ausstoß in Produktion und Logistik senken','oeko','Klimaschutz ist ein ökologisches Ziel.'],
+    ['Second-Hand-Kleidung ist erschwinglich für alle','soz','Erschwinglichkeit ermöglicht Teilhabe – auch mit kleinem Budget. Ökonomisch ebenfalls vertretbar.','wirt'],
+    ['Kreislaufwirtschaft senkt Materialkosten und Abhängigkeit von Rohstoffen (Vaude)','wirt','Hier steht die langfristige Wirtschaftlichkeit im Vordergrund.'],
+    ['Weniger Plastikverpackung und Plastikmüll','oeko','Abfallvermeidung schont die Umwelt.']
+  ]},
+  ziel:{cats:['konf','kong','neut'],items:[
+    ['Faire Löhne in den Produktionsländern ↔ möglichst niedrige Produktionskosten','konf','Höhere Löhne erhöhen die Kosten – ein klassischer Zielkonflikt zwischen Sozialem und Ökonomie.'],
+    ['Faire und umweltfreundliche Produktion ↔ für die junge Generation als Arbeitgeber und Marke attraktiv bleiben','kong','Nachhaltigkeit stärkt hier die Reputation – beide Ziele fördern sich.'],
+    ['Kontrolle der gesamten Lieferkette ↔ geringer Verwaltungsaufwand für kleine Unternehmen','konf','Mehr Kontrolle bedeutet mehr Aufwand und Kosten.'],
+    ['Weniger Verpackungsmaterial ↔ geringere Materialkosten','kong','Weniger Material schont die Umwelt und spart Geld.'],
+    ['Leicht höhere Verbraucherpreise ↔ faire Arbeitsbedingungen','neut','Laut M4 garantieren auch hohe Preise keine fairen Bedingungen – und eine geringe Preiserhöhung hindert sie nicht. Die Lösung im Material nennt hier Zielneutralität. (Diskutiert: Seht ihr das genauso?)'],
+  ]},
+  strat:{cats:['eff','kon','suf'],items:[
+    ['Armedangels: KI-gestützte Verkaufsprognosen verringern die Überproduktion um 40.000 Stück pro Jahr','eff','Weniger Ressourcen für dasselbe Ergebnis (verkaufte Kleidung) – Effizienz.'],
+    ['Armedangels: 100 % erneuerbare Energie in Büro, Lager und Onlineshop','kon','Fossile Energie wird durch naturverträgliche ersetzt – Konsistenz.'],
+    ['VAUDE: Verzicht auf PTFE-Membranen, damit Produkte recycelt werden können','kon','Materialien werden kreislauffähig gestaltet – Konsistenz.'],
+    ['VAUDE Second Hand Shop: gebrauchte Ausrüstung in Top-Zustand','suf','Die Nutzungsdauer wird verlängert, es muss weniger neu produziert werden – Suffizienz.'],
+    ['RÅ Denim: ungewaschener Jeansstoff spart 40 % Wasser','eff','Weniger Wasser pro Hose – Effizienz.'],
+    ['Zalando: Energieverbrauch in Lagern und Büros optimieren','eff','Gleiche Leistung mit weniger Energie – Effizienz.'],
+    ['Circular Denim aus recycelter Bio-Baumwolle aus eigenen Schnittresten','kon','Abfälle werden wieder zum Rohstoff – Konsistenz (Kreislauf).'],
+    ['Kleinanzeigen: Dinge gebraucht kaufen statt neu','suf','Vorhandene Güter werden weitergenutzt – Suffizienz.'],
+    ['„Brauche ich das wirklich?“ – Impulskäufe vermeiden','suf','Weniger konsumieren ist der Kern der Suffizienz.'],
+    ['Ernteabfälle werden in einer Biogasanlage zu Energie','kon','Reststoffe werden naturverträglich genutzt – Konsistenz.'],
+    ['Sellpy: Sendungen bündeln, um Transportwege zu sparen','eff','Weniger Fahrten für dieselbe Liefermenge – Effizienz.'],
+    ['Werkzeug oder Fahrrad leihen statt selbst kaufen','suf','Teilen statt besitzen – Suffizienz.']
+  ]},
+  gw:{cats:['g1','g2','g3','g4','g5','g0'],items:[
+    ['Shampoo: „100 % natürlich und umweltfreundlich!“ – ohne weitere Angaben','g1','„Natürlich“ und „umweltfreundlich“ sind nicht geschützt. Allgemeine Umweltaussagen ohne Nachweis sind in der EU seit 27.09.2026 verboten.'],
+    ['Fast-Food-Kette: „Jetzt neu – komplett ohne Plastikstrohhalme!“','g2','Plastikstrohhalme sind in der EU seit 2021 ohnehin verboten. Werben mit Selbstverständlichkeiten.'],
+    ['Ein Hersteller druckt sein selbst entworfenes Blatt-Logo „EcoChoice“ auf die Verpackung','g3','Selbst erfundenes Siegel ohne unabhängige Kontrolle – seit 2026 in der EU nicht mehr erlaubt.'],
+    ['Milchkarton im Stil von ungebleichtem Packpapier, darauf Wiese und glückliche Kühe','g4','Grüne Bildsprache weckt Assoziationen zu Natur und Recycling – sagt aber nichts über die tatsächliche Herstellung.'],
+    ['Mineralölkonzern: „Klimaneutral tanken – für nur 1,1 Cent pro Liter“ (CO₂-Ausgleich)','g1','„Klimaneutral“ durch Kompensation ändert nichts an der Verbrennung. Shell erhielt dafür den „Goldenen Geier“ 2022 der Deutschen Umwelthilfe.'],
+    ['Fast-Fashion-Kette bewirbt eine kleine „grüne Kollektion“, der Großteil des Sortiments bleibt kurzlebige Wegwerfmode','g5','Ein Vorzeigeprodukt soll das ganze Unternehmen grün erscheinen lassen, das Kerngeschäft bleibt umweltschädlich.'],
+    ['T-Shirt mit GOTS-Zertifikat: unabhängig kontrolliert, Kriterien öffentlich einsehbar','g0','Ein unabhängiges Siegel mit öffentlichen Kriterien ist ein glaubwürdiger Nachweis.']
+  ]},
+  lk:{cats:['pro','contra'],items:[
+    ['Menschenrechte sind nicht verhandelbar.','pro','Grundlegende Rechte sollen nicht vom Preis abhängen.'],
+    ['Höhere Kosten – vor allem für kleine Unternehmen.','contra','Kontrolle und Dokumentation verursachen Aufwand.'],
+    ['Freiwilliges Engagement der Unternehmen reicht nicht aus.','pro','Das Monitoring zum Nationalen Aktionsplan (2016) zeigte: zu wenige Unternehmen handelten freiwillig.'],
+    ['Die Wettbewerbsfähigkeit deutscher Unternehmen sinkt.','contra','Konkurrenten aus Ländern ohne solche Regeln haben geringere Kosten.'],
+    ['Die Reputation steigt, denn Konsumierende wollen faire Produkte.','pro','Fairness kann ein Wettbewerbsvorteil sein.'],
+    ['Die Nachverfolgung von Vorprodukten und Rohstoffen ist technisch kompliziert.','contra','Lieferketten haben viele Stufen und Zwischenhändler.'],
+    ['Nachverfolgung ist heute über IT (z. B. QR-Codes) möglich.','pro','Technische Lösungen machen Kontrolle machbar.'],
+    ['Die Preise für Endprodukte steigen dadurch nicht wesentlich.','pro','Löhne machen nur einen kleinen Teil des Endpreises aus.'],
+    ['Unternehmen ziehen sich aus Ländern mit schwacher Regierungsführung zurück – dort gehen Jobs verloren.','contra','Laut iwd (2024) haben sich 10 % der Großbetriebe zurückgezogen oder planen dies.'],
+    ['Unternehmen befürchten eine Flut von Klagen.','contra','Angst vor Schadensersatzprozessen (laut Material eher unwahrscheinlich).']
+  ]}
+};
+function renderSort(host){
+  const id=host.dataset.sort,cfg=SORTS[id];const saved=store.get('sort:'+id,{});
+  const order=store.get('order:'+id,null)||shuffle(cfg.items.map((_,i)=>i));store.set('order:'+id,order);
+  const score=el('p','score');
+  const upd=()=>{const s=store.get('sort:'+id,{});const n=Object.keys(s).length,ok=Object.values(s).filter(Boolean).length;score.textContent=n?`${ok} von ${cfg.items.length} richtig zugeordnet${n<cfg.items.length?` (${cfg.items.length-n} offen)`:ok===cfg.items.length?' 🎉':''}`:'';};
+  order.forEach(i=>{
+    const [t,right,ex,alt]=cfg.items[i];const c=el('div','sc');
+    c.appendChild(el('div','t',esc(t)));
+    const o=el('div','opts');
+    cfg.cats.forEach(k=>{const b=el('button',null,esc(CAT[k].l));b.type='button';
+      b.onclick=()=>{$$('button',o).forEach(x=>x.classList.remove('pick-ok','pick-bad'));
+        const good=k===right||k===alt;b.classList.add(good?'pick-ok':'pick-bad');
+        c.classList.toggle('right',good);c.classList.toggle('wrong',!good);
+        exEl.innerHTML=(good?'✔ ':'✘ Besser: <b>'+esc(CAT[right].l)+'</b>. ')+esc(ex);
+        const s=store.get('sort:'+id,{});s[i]=good;store.set('sort:'+id,s);upd();};
+      o.appendChild(b);});
+    c.appendChild(o);const exEl=el('div','ex');c.appendChild(exEl);host.appendChild(c);
+  });
+  host.after(score);upd();
+}
+
+/* ---------- Dreieck ---------- */
+const DIMS={
+  oeko:['Ökologie','oeko','Natürliche Lebensgrundlagen schützen: Rohstoffe, Energie und Wasser sparen; Abfall, Schadstoffe und Treibhausgase vermeiden; Böden und Artenvielfalt erhalten.','Bio-Baumwolle, Ökostrom, weniger Verpackung, Second Hand'],
+  wirt:['Ökonomie','wirt','Wirtschaftlich sinnvoll handeln: Geld, Zeit und Material effizient einsetzen, Dinge lange nutzen; dauerhaft tragfähiges Wirtschaften für Unternehmen, Erzeuger und Verbraucher:innen.','Reparieren, Leihen statt Kaufen, Kreislaufwirtschaft senkt Materialkosten'],
+  soz:['Soziales','soz','Gerechte Lebens- und Arbeitsbedingungen für alle, heute und morgen: faire Löhne, Gesundheit, Sicherheit am Arbeitsplatz, Teilhabe und Zusammenhalt.','Fairtrade, Arbeitsschutz in Fabriken, regionale Arbeitsplätze, Erschwinglichkeit']
+};
+function initTri(){
+  $$('.corner').forEach(g=>{const show=()=>{$$('.corner').forEach(x=>x.classList.remove('on'));g.classList.add('on');const d=DIMS[g.dataset.k];
+    $('#triinfo').innerHTML=`<span class="pill p-${d[1]}">${d[0]}</span><p style="margin-top:8px">${d[2]}</p><p class="muted" style="margin:0"><b>Beispiele:</b> ${d[3]}</p>`;};
+    g.addEventListener('click',show);g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();show();}});});
+}
+
+/* ---------- SDGs ---------- */
+const SDG=[
+ [1,'Keine Armut','#E5243B','Faire Preise sichern Bäuerinnen und Arbeitern ein Einkommen, von dem sie leben können – z. B. durch Fairtrade.'],
+ [2,'Kein Hunger','#DDA63A','Lebensmittel nicht verschwenden, Reste verwerten und nur so viel kaufen, wie du brauchst.'],
+ [3,'Gesundheit und Wohlergehen','#4C9F38','Giftige Chemikalien und unsichere Fabriken gefährden die Gesundheit der Arbeiter:innen. Bio-Anbau und Arbeitsschutz helfen.'],
+ [4,'Hochwertige Bildung','#C5192D','Kinderarbeit hält Kinder vom Schulbesuch ab. Und Bildung für nachhaltige Entwicklung macht bewussten Konsum erst möglich.'],
+ [5,'Geschlechter&shy;gleichheit','#FF3A21','In Textilfabriken arbeiten überwiegend Frauen – oft zu den schlechtesten Bedingungen. Faire Standards stärken ihre Rechte.'],
+ [6,'Sauberes Wasser und Sanitär&shy;einrichtungen','#26BDE2','Baumwollanbau und Färben verbrauchen und verschmutzen viel Wasser. Wassersparende Verfahren wie ungewaschener Denim helfen.'],
+ [7,'Bezahlbare und saubere Energie','#FCC30B','Ökostrom in Produktion, Lagern und Rechenzentren der Onlineshops.'],
+ [8,'Menschen&shy;würdige Arbeit und Wirtschafts&shy;wachstum','#A21942','Faire Löhne, sichere Fabriken, keine Kinder- und Zwangsarbeit – das Ziel des Lieferkettengesetzes.'],
+ [9,'Industrie, Innovation und Infrastruktur','#FD6925','Neue Materialien, Recyclingtechnik und digitale Lösungen wie KI-Verkaufsprognosen gegen Überproduktion.'],
+ [10,'Weniger Ungleich&shy;heiten','#DD1367','Gerechtere Handelsbeziehungen zwischen reichen Konsum- und armen Produktionsländern.'],
+ [11,'Nachhaltige Städte und Gemeinden','#FD9D24','Repair-Cafés, Tauschbörsen, Leihläden und kurze Wege zum regionalen Einkauf.'],
+ [12,'Nachhaltige/r Konsum und Produktion','#BF8B2E','Das Kernziel für uns: weniger Abfall, längere Nutzung, Information über nachhaltige Lebensweisen und Unternehmen, die nachhaltig wirtschaften und berichten.'],
+ [13,'Maßnahmen zum Klimaschutz','#3F7E44','CO₂ in Produktion, Transport und Versand vermeiden – und bei sich selbst: weniger kaufen, länger nutzen.'],
+ [14,'Leben unter Wasser','#0A97D9','Beim Waschen von Polyester-Kleidung lösen sich Mikrofasern, die über das Abwasser in Flüsse und Meere gelangen.'],
+ [15,'Leben an Land','#56C02B','Nachhaltige Forstwirtschaft (FSC), ökologischer Landbau und Schutz der Artenvielfalt.'],
+ [16,'Frieden, Gerechtigkeit und starke Institutionen','#00689D','Gesetze gegen Greenwashing und Menschenrechtsverletzungen, Klagerechte für Betroffene.'],
+ [17,'Partner&shy;schaften zur Erreichung der Ziele','#19486A','Unternehmen, Staaten und Organisationen arbeiten zusammen – z. B. Modefirmen mit NGOs oder der Fair Wear Foundation.']
+];
+const DARK=[7,11,2];
+function initSDG(){
+  const g=$('#sdgs');
+  SDG.forEach(([n,t,c,info])=>{const b=el('button','sdg'+(DARK.includes(n)?' dark':''),`<b>${n}</b><span>${t}</span>`);b.style.background=c;b.type='button';
+    b.onclick=()=>{$$('.sdg',g).forEach(x=>x.classList.remove('on'));b.classList.add('on');
+      $('#sdginfo').innerHTML=`<p class="eyebrow" style="color:${n===7?'#8a6a00':c}">Ziel ${n}</p><h3 style="margin:4px 0 6px">${t}</h3><p style="margin:0"><b>Und dein Konsum?</b> ${info}</p>`;};
+    g.appendChild(b);});
+  const CASES=[
+    ['Eine Textilfabrik stürzt ein, weil trotz Rissen im Gebäude weitergearbeitet wurde.',[8,3],[5,12,16]],
+    ['Jeans aus Bio-Baumwolle, ungewaschen produziert – das spart 40 % Wasser.',[6,12],[15,3,13]],
+    ['Eure Schule veranstaltet eine Kleidertausch-Party.',[12],[11,13,4]],
+    ['Ein Onlinehändler stellt seine Lager auf Ökostrom um.',[7,13],[12]],
+    ['Ein Fleece-Pulli aus Polyester verliert bei jeder Wäsche Mikrofasern.',[14],[12,6]]
+  ];
+  const host=$('#sdgcases');
+  CASES.forEach(([t,core,ok],ci)=>{
+    const d=el('div','card');d.style.marginBottom='10px';d.innerHTML=`<p style="margin-bottom:4px"><b>Fall ${ci+1}:</b> ${esc(t)}</p>`;
+    const pick=el('div','sdgpick');const sel=new Set(store.get('sdgc:'+ci,[]));
+    SDG.forEach(([n,,c])=>{const b=el('button',DARK.includes(n)?'dark':'',n);b.type='button';b.style.background=c;b.title='Ziel '+n+': '+SDG[n-1][1].replace(/&shy;/g,'');if(sel.has(n))b.classList.add('sel');
+      b.onclick=()=>{sel.has(n)?sel.delete(n):sel.add(n);b.classList.toggle('sel');store.set('sdgc:'+ci,[...sel]);};pick.appendChild(b);});
+    const fb=el('p','muted');fb.style.margin='4px 0 0';
+    const btn=el('button','btn sm pri','Prüfen');btn.onclick=()=>{
+      const hit=core.filter(n=>sel.has(n)),miss=core.filter(n=>!sel.has(n)),extra=[...sel].filter(n=>!core.includes(n)&&!ok.includes(n));
+      const nm=a=>a.map(n=>n+' ('+SDG[n-1][1].replace(/&shy;/g,'')+')').join(', ');
+      fb.innerHTML=(miss.length?`<span class="fb bad" style="margin:0">Es fehlt: ${nm(miss)}.</span> `:`<span class="fb ok" style="margin:0">✔ Die Kernziele hast du erkannt!</span> `)
+        +`<br>Kernziele: ${nm(core)}. Ebenfalls gut begründbar: ${nm(ok)}.`+(extra.length?` <br>Deine weiteren Ziele (${extra.join(', ')}) – kannst du sie begründen?`:'');};
+    d.append(pick,btn,fb);host.appendChild(d);
+  });
+}
+
+/* ---------- Ziele-Check ---------- */
+const ZC=[
+  ['Zalando','„Bis 2030 die CO₂-Emissionen reduzieren und langfristig klimaneutral werden.“',[0,1,0],'Termin ja, aber um wie viel sollen die Emissionen sinken? „Langfristig“ ist vage, Maßnahmen fehlen.'],
+  ['Zalando','„Bis 2025 sollen mindestens 50 % der Produkte aus nachhaltigen Materialien bestehen.“',[1,1,0],'Messbar und terminiert. Aber was gilt als „nachhaltiges Material“? Der Weg bleibt offen.'],
+  ['Zalando','„Bis 2028 in allen Bereichen der Nachhaltigkeit führend sein.“',[0,1,0],'Klingt gut, ist aber nicht messbar: Führend im Vergleich zu wem, gemessen woran?'],
+  ['H&M','„Bis 2040 nur noch so viel produzieren, wie tatsächlich verkauft wird.“',[1,1,0],'Messbar (Überproduktion = 0) und terminiert – aber sehr weit weg und ohne genannte Maßnahmen.'],
+  ['Armedangels','„Mithilfe KI-gestützter Verkaufsprognosen die Überproduktion jährlich um 40.000 Stück senken.“',[1,1,1],'Konkrete Zahl, jährlicher Zeitraum und eine Maßnahme – so sieht ein überprüfbares Ziel aus.'],
+  ['VAUDE','„Die gesamten Emissionen bis 2025 erheblich senken und in Zukunft CO₂-neutral arbeiten.“',[0,1,0],'„Erheblich“ ist keine Messgröße, „in Zukunft“ kein Termin für die Neutralität.']
+];
+function initZC(){
+  const tb=$('#zc tbody');const saved=store.get('zc',{});
+  ZC.forEach(([f,goal,,sol],i)=>{const tr=el('tr');tr.innerHTML=`<td><b>${f}</b><br>${esc(goal)}<div class="sol">💡 ${esc(sol)}</div></td>`;
+    [0,1,2].forEach(k=>{const td=el('td','c');const cb=el('input');cb.type='checkbox';cb.checked=!!(saved[i]&&saved[i][k]);cb.setAttribute('aria-label',['messbar','Termin','Maßnahmen'][k]);
+      cb.onchange=()=>{const s=store.get('zc',{});s[i]=s[i]||[0,0,0];s[i][k]=cb.checked?1:0;store.set('zc',s);};td.appendChild(cb);tr.appendChild(td);});
+    tb.appendChild(tr);});
+  $('#zcbtn').onclick=()=>{const t=$('#zc');t.classList.add('show');let ok=0,all=0;
+    $$('tbody tr',t).forEach((tr,i)=>{const cbs=$$('input',tr);let rowok=true;cbs.forEach((cb,k)=>{all++;const r=(cb.checked?1:0)===ZC[i][2][k];if(r)ok++;else rowok=false;
+      cb.parentElement.style.background=r?'var(--ok-soft)':'var(--bad-soft)';});tr.classList.toggle('ok',rowok);});
+    $('#zcfb').textContent=`${ok} von ${all} Einschätzungen stimmen mit der Lösung überein.`;$('#zcfb').className='fb '+(ok>=all*0.7?'ok':'bad');};
+}
+
+/* ---------- Kreislauf ---------- */
+const FLOW=[
+  ['1 Sammlung','Container, Straße','Jedes Jahr werden in Deutschland ca. <b>eine Million Tonnen</b> Textilien in die Kleidersammlung gegeben – über Container, Straßensammlungen oder die direkte Abgabe in Second-Hand-Läden und Kleiderkammern.'],
+  ['2 Sortierung','Sortierbetrieb','In spezialisierten Betrieben werden die Textilien <b>per Hand</b> sortiert. Was nicht mehr tragbar ist, wird zu Putzlappen oder Rohstoffen recycelt; ein Rest wird zu Müll.'],
+  ['3 Großhandel','Importeure','Second-Hand-Kleidung wird vor allem an Abnehmer in <b>Osteuropa, dem Mittleren Osten und Afrika</b> verkauft – ein Teil auch an Second-Hand-Läden in Deutschland und Westeuropa.'],
+  ['4 Kleinhandel','Händler:innen vor Ort','In den Importländern leben viele Menschen vom <b>Handel</b> mit Gebrauchtkleidung oder davon, sie als Schneider:in umzuarbeiten.'],
+  ['5 Konsum','Käufer:innen','Second-Hand-Kleidung ist zunehmend gefragt: weil sie <b>preisgünstig</b> ist, ein großes Angebot auch bei kleinem Budget bietet, man sich unabhängig von Moden kleiden kann, es ausgefallene Einzelstücke gibt – und weil es <b>Ressourcen schont</b>.']
+];
+function initFlow(){
+  const f=$('#flow');FLOW.forEach(([t,s,i],k)=>{const b=el('button',null,`${t}<small>${s}</small>`);b.type='button';b.onclick=()=>{$$('button',f).forEach(x=>x.classList.remove('on'));b.classList.add('on');$('#flowinfo').innerHTML=`<p style="margin:0">${i}</p>`+(k===4?'<p class="muted" style="margin:8px 0 0">💬 Diskutiert: Welche Vor- und Nachteile hat der Export von Altkleidern für die Importländer?</p>':'');};f.appendChild(b);});
+  $('button',f).click();
+  const R=['Vermeiden – gar nicht erst kaufen','Wiederverwenden – Second Hand, Tauschen, Weitergeben','Reparieren – Kaputtes wieder nutzbar machen','Recyceln – Fasern zu neuem Material verarbeiten','Energetisch verwerten – verbrennen und Energie gewinnen','Beseitigen – Deponie'];
+  const ol=$('#rank');let order=shuffle(R.map((_,i)=>i));if(order.every((v,i)=>v===i))order.reverse();
+  order.forEach(i=>{const li=el('li');li.dataset.i=i;li.innerHTML=`<span>${R[i]}</span>`;const mv=el('span','mv');
+    const u=el('button',null,'▲'),d=el('button',null,'▼');u.type=d.type='button';u.setAttribute('aria-label','nach oben');d.setAttribute('aria-label','nach unten');
+    u.onclick=()=>{if(li.previousElementSibling)ol.insertBefore(li,li.previousElementSibling);clr();};d.onclick=()=>{if(li.nextElementSibling)ol.insertBefore(li.nextElementSibling,li);clr();};
+    mv.append(u,d);li.appendChild(mv);ol.appendChild(li);});
+  const clr=()=>{$$('li',ol).forEach(l=>l.classList.remove('right','wrong'));$('#rankfb').textContent='';};
+  $('#rankbtn').onclick=()=>{let ok=0;$$('li',ol).forEach((l,p)=>{const r=+l.dataset.i===p;l.classList.add(r?'right':'wrong');if(r)ok++;});
+    const fb=$('#rankfb');fb.className='fb '+(ok===R.length?'ok':'bad');fb.textContent=ok===R.length?'🎉 Richtig! Je weiter oben, desto mehr Ressourcen werden geschont.':`${ok} von ${R.length} an der richtigen Stelle.`;};
+}
+
+/* ---------- Unternehmen ---------- */
+const FIRMS=[
+ {n:'VAUDE',m:'Outdoor-Hersteller mit eigenem Second-Hand-Shop',d:'Langlebige Outdoor-Ausrüstung; seit 2024 Verkauf gebrauchter VAUDE-Produkte, Kooperation mit FairWertung und eBay.',
+  ms:[['Second Hand Webshop: Rückläufer werden aufbereitet und geprüft (Zustand „wie neu“, „sehr gut“, „gut“)','oeko','suf'],['Cleveres Design und sorgfältige Materialauswahl für lange Nutzungsdauer','oeko','suf'],['Keine PTFE-Membranen, damit Produkte recycelbar sind; PFC-freie Imprägnierung','oeko','kon'],['Kreislaufwirtschaft senkt Materialkosten und Rohstoffabhängigkeit','wirt','kon'],['Ressourcenschonende Produktion spart Wasser und Energie','oeko','eff'],['Faire Arbeitsbedingungen in der Lieferkette, Weiterbildung für Mitarbeitende','soz',null]],
+  crit:'Die Ziele zur CO₂-Reduktion („bis 2025 erheblich senken“) sind wenig konkret. Second Hand macht bisher nur einen kleinen Teil des Geschäfts aus.'},
+ {n:'Zalando',m:'Online-Modehändler mit 32 Nachhaltigkeitskriterien',d:'Großer Onlinehändler, der vor allem Neuware vieler Marken verkauft und ein Nachhaltigkeitsprogramm mit 32 Kriterien formuliert hat.',
+  ms:[['Bis 2025 sollen 50 % der Produkte aus nachhaltigen Materialien bestehen','oeko','kon'],['Energieeffizienz in Lagern, Büros und beim Transport','oeko','eff'],['CO₂-arme Transportlösungen wie Elektrofahrzeuge','oeko','kon'],['Förderung von Second-Hand-Mode','oeko','suf'],['Faire Entlohnung und ethische Beschaffung ohne Kinderarbeit','soz',null],['Verbraucheraufklärung für nachhaltigere Kaufentscheidungen','soz','suf']],
+  crit:'Das Geschäftsmodell beruht auf dem Verkauf neuer Ware und kostenlosen Retouren. Viele der 32 Kriterien sind Absichtserklärungen ohne Messgröße – prüfe sie mit dem Ziele-Check aus Station 2.'},
+ {n:'Armedangels',m:'Fair-Fashion-Label',d:'Modelabel, das auf Bio-Baumwolle, faire Arbeitsbedingungen (Mitglied der Fair Wear Foundation) und Kreislaufmaterialien setzt.',
+  ms:[['Bio-Baumwolle (18 % weniger Treibhausgase als konventioneller Anbau), Tencel, recyceltes Polyester','oeko','kon'],['KI-Verkaufsprognosen reduzieren Überproduktion um 40.000 Stück pro Jahr','wirt','eff'],['100 % erneuerbare Energie in Büro, Lager und Onlineshop; E-Firmenwagen; Dienstreisen per Bahn','oeko','kon'],['Circular Denim: 20 % recycelte Bio-Baumwolle aus eigenen Schnittresten','oeko','kon'],['Mitglied der Fair Wear Foundation, faire Löhne','soz',null],['Kund:innen werden zu Wiederverkauf und Leihen ermutigt','oeko','suf']],
+  crit:'Höhere Preise durch faire Produktion; unvermeidbare Emissionen werden kompensiert (seit 2026 darf damit nicht mehr als „klimaneutral“ geworben werden). Auch nachhaltige Neuware verbraucht Ressourcen.'},
+ {n:'Vinted',m:'Online-Marktplatz für Second-Hand-Kleidung (C2C)',d:'Privatpersonen verkaufen gebrauchte Kleidung direkt an andere Privatpersonen.',
+  ms:[['Wiederverkauf senkt die Nachfrage nach neu produzierter Kleidung','oeko','suf'],['Günstige Preise machen nachhaltigen Konsum für viele attraktiv','wirt','suf'],['Unikate und Individualität statt Massenware','soz','suf'],['Optimierte Logistik und energieeffiziente Technik','oeko','eff'],['Community, die nachhaltigen Konsum fördert','soz','suf']],
+  crit:'Einzelversand per Paket verursacht Transportemissionen. Niedrige Preise können zu „Second-Hand-Shopping-Sucht“ führen – dann wird nicht weniger, sondern nur anders konsumiert (Rebound).'},
+ {n:'Sellpy',m:'Second-Hand-Plattform mit Abholservice',d:'Sellpy übernimmt für Privatleute das Fotografieren, Einstellen und Versenden gebrauchter Kleidung.',
+  ms:[['Verlängert die Lebensdauer von Produkten, weniger Neuproduktion','oeko','suf'],['Sendungen bündeln und umweltfreundliche Transportmittel','oeko','eff'],['Datenanalysen vermeiden Überangebot','wirt','eff'],['Recycling und Upcycling für unverkäufliche Ware','oeko','kon'],['Bildungsinitiativen und Workshops zu nachhaltigem Konsum','soz','suf']],
+  crit:'Kompensation unvermeidbarer Emissionen durch Aufforstung – wie wirksam ist das? Sellpy gehört mehrheitlich zur H&M-Gruppe – passt das zusammen?'},
+ {n:'Kleinanzeigen',m:'Lokale Plattform für gebrauchte Waren',d:'Privatpersonen und kleine Händler bieten gebrauchte Dinge an, oft zur Abholung vor Ort.',
+  ms:[['Wiederverwendung statt Neukauf schont Ressourcen und vermeidet Abfall','oeko','suf'],['Lokale Abholung verkürzt Transportwege','oeko','eff'],['Günstige Preise für Käufer:innen, Zusatzeinnahmen für Verkäufer:innen','wirt','suf'],['Stärkt lokale Wirtschaft, kleine Unternehmen und Selbstständige','wirt',null],['Nutzungsbedingungen gegen Diskriminierung und illegale Waren','soz',null]],
+  crit:'Wechselnde Qualität, keine Garantie, Risiko unzuverlässiger Verkäufer; zusätzliche Fahrten zur Abholung möglich.'},
+ {n:'momox / medimops',m:'An- und Verkauf gebrauchter Bücher, Medien und Kleidung',d:'momox kauft gebrauchte Artikel an, medimops verkauft sie weiter – ein Geschäftsmodell mit vier Gewinnern: Verkäufer, Käufer, Unternehmen und Umwelt.',
+  ms:[['Ein gebrauchtes Buch spart laut Unternehmen 1,37 kg CO₂','oeko','suf'],['Laut eigenen Angaben 52.000 t CO₂-Einsparung (2023)','oeko','suf'],['Zentrale Lagerhaltung und moderne Sortiersysteme','wirt','eff'],['Recycelte Verpackungen, digitale Belege','oeko','kon'],['Diversität, Arbeitsschutz, Beschwerdemanagement','soz',null]],
+  crit:'Herstellern neuer Ware und Wohltätigkeitsorganisationen (weniger Sachspenden) entgehen Einnahmen. Transporte verursachen weiterhin Emissionen.'}
+];
+function initFirms(){
+  const bar=$('#firms');const show=i=>{
+    $$('button',bar).forEach((b,k)=>b.classList.toggle('on',k===i));const F=FIRMS[i];const r=store.get('radar:'+F.n,[3,3,3]);
+    const box=$('#firm');box.innerHTML=`<div><p class="eyebrow">${esc(F.m)}</p><h3>${esc(F.n)}</h3><p class="model">${esc(F.d)}</p>
+      <ul class="measures">${F.ms.map(([t,d,s])=>`<li>${esc(t)}<br><span class="pill p-${d}">${CAT[d].l}</span>${s?`<span class="pill p-${s}">${CAT[s].l}</span>`:''}</li>`).join('')}</ul>
+      <div class="crit">⚠️ <b>Kritisch betrachtet:</b> ${esc(F.crit)}</div></div>
+      <div class="radar"><p class="eyebrow">Dein Nachhaltigkeits-Radar</p><svg viewBox="0 0 300 270" aria-label="Bewertung in drei Dimensionen"></svg>
+      ${['oeko','wirt','soz'].map((k,j)=>`<label><span style="color:var(--${k})">${CAT[k].l}</span><input type="range" min="1" max="5" value="${r[j]}" data-j="${j}"><output>${r[j]}</output></label>`).join('')}
+      <p class="muted" style="font-size:.85rem;margin-top:6px">1 = schwach, 5 = sehr überzeugend</p></div>`;
+    const draw=()=>{const v=$$('input',box).map(x=>+x.value);store.set('radar:'+F.n,v);$$('output',box).forEach((o,j)=>o.textContent=v[j]);
+      const cx=150,cy=150,R=110,ang=[-90,30,150].map(a=>a*Math.PI/180);
+      const pt=(j,s)=>[cx+Math.cos(ang[j])*R*s,cy+Math.sin(ang[j])*R*s];
+      let h='';for(let s=1;s<=5;s++)h+=`<polygon points="${[0,1,2].map(j=>pt(j,s/5).join(',')).join(' ')}" fill="none" stroke="#d9d0bd"/>`;
+      [0,1,2].forEach(j=>{const[x,y]=pt(j,1);h+=`<line x1="${cx}" y1="${cy}" x2="${x}" y2="${y}" stroke="#d9d0bd"/>`;});
+      h+=`<polygon points="${v.map((s,j)=>pt(j,s/5).join(',')).join(' ')}" fill="rgba(31,107,74,.25)" stroke="#1f6b4a" stroke-width="2.5"/>`;
+      const lab=[['Ökologie',150,22,'#2f7d4a'],['Ökonomie',262,226,'#2b5d9b'],['Soziales',38,226,'#c0532a']];
+      lab.forEach(([t,x,y,c])=>h+=`<text x="${x}" y="${y}" text-anchor="middle" font-weight="700" font-size="14" fill="${c}" font-family="Source Sans 3,sans-serif">${t}</text>`);
+      $('svg',box).innerHTML=h;};
+    $$('input',box).forEach(x=>x.oninput=draw);draw();store.set('firm',i);};
+  FIRMS.forEach((F,i)=>{const b=el('button',null,esc(F.n));b.type='button';b.onclick=()=>show(i);bar.appendChild(b);});
+  show(store.get('firm',0));
+}
+
+/* ---------- Greenwashing ---------- */
+const GWS=[
+ ['1 · Irreführende Begriffe','„Umweltfreundlich“, „natürlich“, „regional“ oder „klimaneutral“ sind (bzw. waren) rechtlich nicht geschützt. „Bio“ und „Öko“ dagegen dürfen nur für echten ökologischen Anbau verwendet werden.'],
+ ['2 · Werben mit Selbstverständlichkeiten','Etwas wird als besondere Leistung verkauft, obwohl es gesetzlich ohnehin vorgeschrieben ist – z. B. „ohne Plastikstrohhalm“.'],
+ ['3 · Fragwürdige Siegel','Unternehmen erfinden eigene Siegel, die niemand unabhängig kontrolliert. „Klimaneutral“-Siegel beruhen oft nur auf Kompensationszahlungen.'],
+ ['4 · Grüne Bildsprache','Grüne Farbe, Wiesen, „glückliche Tiere“ oder Packpapier-Optik wecken Assoziationen mit Natur – auch wenn die Verpackung kaum recycelbar ist.'],
+ ['5 · Leuchtturm-Produkte','Einzelne grüne Vorzeigeprodukte lassen das ganze Unternehmen umweltfreundlich wirken, obwohl das Kerngeschäft umweltschädlich bleibt.'],
+ ['6 · Fehlende Transparenz','Weniger umweltfreundliche Praktiken werden verschwiegen, Daten nicht offengelegt. Faustregel: Je umweltschädlicher das Kerngeschäft, desto grüner die Werbung.']
+];
+const MCD=[
+ ['„Aus leeren Bechern werden Happy-Meal-Bücher.“','Die Bücher bestehen nur zu <b>40 %</b> aus alten Einwegbechern. Strategie: fragwürdige Nachhaltigkeitsaussage.'],
+ ['„Lasst uns gemeinsam Ressourcen mehr wertschätzen!“','Die Verantwortung wird auf die Gäste abgeschoben („richtig wegwerfen“). Die gesetzliche <b>Mehrwegangebotspflicht</b> wird kaum umgesetzt – Mehrweg wäre die bessere Lösung.'],
+ ['Wechsel von Einwegplastik zu Papierverpackungen','Das führt zu keinem Gramm weniger Abfall. Die Papierherstellung braucht viel <b>Energie, Wasser und Chemikalien</b>. Strategie: irreführende Formulierungen.'],
+ ['„Es braucht nicht viel. Es braucht viele.“','Ein eingängiger Slogan, der Engagement suggeriert, ohne dass sich am Geschäftsmodell (Einwegverpackungen) etwas ändert.']
+];
+const HM=[
+ ['Grünes „Conscious Choice“-Etikett','Ein eigenes Label ohne unabhängige Kontrolle. Strategie: fragwürdiges Siegel und grüne Bildsprache.'],
+ ['„Aus recyceltem Polyester“','Die Kleidung besteht oft aus <b>Materialmischungen</b>, die sich nicht wieder trennen und recyceln lassen. Beim Waschen lösen sich Mikrofasern. Recyceltes Polyester lässt sich nicht endlos wiederverwerten.'],
+ ['„Möglichst nachhaltige Mode für alle zugänglich machen“','Fast Fashion ist laut Barbara Metz (Deutsche Umwelthilfe) per Definition nicht auf <b>Langlebigkeit</b> ausgelegt: „Der Fehler liegt im System.“'],
+ ['Ziel: bis 2040 nur so viel produzieren, wie verkauft wird','Bis dahin wird weiter überproduziert. Das Recyclingversprechen vermittelt ein <b>gutes Gewissen</b> beim Kauf.']
+];
+function reveal(host,arr){arr.forEach(([q,a])=>{const d=el('div','reveal');const b=el('button',null,`<span>${q}</span>`);b.type='button';b.onclick=()=>d.classList.toggle('open');d.append(b,el('div','hid',a));host.appendChild(d);});}
+
+/* ---------- Siegel ---------- */
+const LABELS=[
+ ['Fairtrade','NGO (Fairtrade International / Fairtrade Deutschland)','unabhängig durch FLOCERT, regelmäßig','v. a. sozial, ökologische Mindeststandards',['garantiert faire Arbeitsbedingungen und Mindestpreise','weltweit bekannt','viele Produktgruppen'],['nicht automatisch Bio','Mischprodukte schon ab 20 % fairer Zutaten','aufwendige Zertifizierung benachteiligt kleine Produzenten']],
+ ['EU-Bio-Logo','Europäische Union','zugelassene Öko-Kontrollstellen, mind. jährlich','ökologisch',['einheitlicher Standard in der EU','garantiert ökologische Produktion','leicht erkennbar'],['nur Lebensmittel','keine sozialen Kriterien','Standards niedriger als bei Anbauverbänden wie Bioland oder Demeter']],
+ ['Blauer Engel','Staat (Bundesumweltministerium, Umweltbundesamt)','Nachweise beim Antrag, Zeichen befristet','Umwelt- und Gesundheitsschutz',['ältestes Umweltzeichen der Welt (1978)','viele Produktgruppen','strenge Kriterien'],['vor allem in Deutschland bekannt','komplexe Kriterien']],
+ ['FSC','NGO (Forest Stewardship Council)','unabhängige Zertifizierer','nachhaltige Forstwirtschaft (Holz, Papier)',['fördert nachhaltige Forstwirtschaft','international anerkannt','verschiedene Zertifizierungsstufen'],['Kritik an Kontrollen in manchen Ländern','unterschiedliche Standards verwirren']],
+ ['GOTS','Internationale Arbeitsgruppe (Global Organic Textile Standard)','unabhängige Zertifizierer','ökologisch und sozial (Textilien)',['umfassender Standard für Bio-Textilien','berücksichtigt Umwelt und Soziales','strenge Kriterien'],['nur Textilien','kann Produkte verteuern']],
+ ['Grüner Knopf','Staat (Bundesentwicklungsministerium)','akkreditierte unabhängige Prüfstellen','sozial und ökologisch (Textilien)',['prüft Produkt und Unternehmen','staatliches Siegel'],['garantiert keine existenzsichernden Löhne','prüft (noch) nicht alle Produktionsstufen']]
+];
+const LABCASES=[
+ ['„GreenLeaf“','Vergeben vom Hersteller selbst. Kriterien: „Wir achten auf die Umwelt.“ Keine externe Kontrolle.',[0,0,0]],
+ ['„FairFaser“','Vergeben von einem gemeinnützigen Verein. Kriterien stehen ausführlich online. Unabhängige Prüfer kontrollieren jährlich – auch unangekündigt.',[1,1,1]],
+ ['„KlimaPlus“','Vergeben von einer Beratungsfirma, die von den Herstellern bezahlt wird. Kriterien sind veröffentlicht, Kontrollen gibt es keine.',[0,0,1]],
+ ['„Natur pur“','Staatliches Umweltzeichen mit öffentlichen Kriterien. Die Unternehmen müssen beim Antrag Nachweise einreichen, das Zeichen ist auf vier Jahre befristet.',[1,1,1]]
+];
+function initLabels(){
+  const g=$('#labels');LABELS.forEach(([n,u,k,s,pro,con])=>{const f=el('div','flip');f.tabIndex=0;f.setAttribute('role','button');f.setAttribute('aria-label',n+' – Karte umdrehen');
+    f.innerHTML=`<div class="in"><div class="f"><h4>${n}</h4><dl><dt>Herausgeber</dt><dd>${u}</dd><dt>Kontrolle</dt><dd>${k}</dd><dt>Umfang</dt><dd>${s}</dd></dl><span class="hintf">↻ umdrehen</span></div>
+      <div class="b"><b style="color:var(--ok)">Vorteile</b><ul>${pro.map(x=>`<li>${x}</li>`).join('')}</ul><b style="color:var(--bad)">Nachteile</b><ul>${con.map(x=>`<li>${x}</li>`).join('')}</ul></div></div>`;
+    const t=()=>f.classList.toggle('on');f.onclick=t;f.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();t();}};g.appendChild(f);});
+  const h=$('#labcases');const Q=['unabhängiger Herausgeber','unabhängige Kontrolle','Kriterien öffentlich'];
+  LABCASES.forEach(([n,t,sol],i)=>{const d=el('div','labcase');d.innerHTML=`<b>${n}</b> – ${esc(t)}`;const c=el('div','chk');
+    Q.forEach((q,k)=>{const l=el('label');const cb=el('input');cb.type='checkbox';l.append(cb,document.createTextNode(q));c.appendChild(l);});
+    const sel=el('select');sel.innerHTML='<option value="">Urteil wählen …</option><option value="3">glaubwürdig</option><option value="1">eingeschränkt glaubwürdig</option><option value="0">nicht glaubwürdig</option>';sel.style.font='inherit';
+    const v=el('div','verdict');const b=el('button','btn sm pri','Prüfen');b.style.marginLeft='8px';
+    b.onclick=()=>{const cbs=$$('input',c);let ok=cbs.every((cb,k)=>(cb.checked?1:0)===sol[k]);const n3=sol.reduce((a,x)=>a+x,0);const want=n3===3?'3':n3===0?'0':'1';const vok=sel.value===want;
+      v.className='verdict '+(ok&&vok?'fb ok':'fb bad');v.style.marginLeft='0';
+      v.textContent=(ok?'✔ Kriterien richtig geprüft. ':'✘ Prüfe die Kriterien noch einmal: erfüllt sind '+(Q.filter((_,k)=>sol[k]).join(', ')||'keine')+'. ')+(vok?'✔ Urteil passt.':'Urteil: '+(want==='3'?'glaubwürdig':want==='0'?'nicht glaubwürdig':'eingeschränkt glaubwürdig')+'.');};
+    d.append(c,sel,b,v);h.appendChild(d);});
+}
+
+/* ---------- Lieferkette ---------- */
+const DIS=[
+ ['258','Fabrikbrand · Pakistan · 2012','Die Textilfabrik Ali Enterprises in Karachi brannte ab. Fenster waren vergittert, Notausgänge versperrt, Feuerlöscher defekt. Hauptkunde war der deutsche Textildiscounter KiK – er hatte die Fabrik von Audit-Firmen prüfen lassen.'],
+ ['1.134','Fabrikeinsturz · Bangladesch · 2013','Das achtstöckige Fabrikgebäude Rana Plaza in Dhaka stürzte ein, rund 2.000 Menschen wurden verletzt. Kurz zuvor waren Risse entdeckt worden, trotzdem wurde weitergearbeitet. Dort ließen u. a. Primark, Mango, C&A, KiK, Adler und Benetton produzieren.'],
+ ['259','Dammbruch · Brasilien · 2019','In Brumadinho brach der Damm eines Absetzbeckens einer Eisenerzmine. Die Schlammlawine zerstörte Häuser und das Ökosystem des Flusses Paraopeba. Wenige Monate vorher hatte der TÜV Süd den Damm geprüft und freigegeben.'],
+ ['34','Streik · Südafrika · 2012','In der Platinmine Marikana streikten Bergleute gegen schlechte Löhne und Wohnbedingungen. 34 Arbeiter wurden von der Polizei erschossen. Ein Hauptkunde der Mine war BASF, das Platin für Abgaskatalysatoren bezog.']
+];
+const LKPOS=['Deutschland sollte sich für die Durchsetzung von Umwelt- und Sozialstandards in Entwicklungsländern einsetzen.','Niemand wird in Deutschland gezwungen, Waren zu kaufen, die unter Missachtung von Menschenrechten hergestellt wurden.','Wenn Unternehmen Schäden anrichten, müssen sie dafür zur Verantwortung gezogen werden.','Es reicht aus, auf das freiwillige Engagement der Unternehmen zu setzen.'];
+function posline(host,key,q,labels=['stimme gar nicht zu','stimme voll zu']){
+  const d=el('div','posline');const v=store.get('pos:'+key,3);
+  d.innerHTML=`<p>${esc(q)}</p><input type="range" min="1" max="5" step="1" value="${v}" aria-label="${esc(q)}"><div class="scale"><span>1 · ${labels[0]}</span><b class="cur">${v}</b><span>5 · ${labels[1]}</span></div>`;
+  const r=$('input',d);r.oninput=()=>{store.set('pos:'+key,+r.value);$('.cur',d).textContent=r.value;if(key.startsWith('main'))comparePos();};host.appendChild(d);
+}
+const MAINQ='Ich als Konsument:in kann durch meine Kaufentscheidungen einen spürbaren Beitrag zur Nachhaltigkeit leisten.';
+function comparePos(){
+  const a=store.get('pos:main-before',null),b=store.get('pos:main-after',null);const h=$('#poscompare');
+  if(a==null||b==null){h.innerHTML='<p class="muted">Bewege beide Regler (Start und hier), um deine Positionen zu vergleichen.</p>';return;}
+  h.innerHTML=[['Vorher',a,'#9aa69e'],['Nachher',b,'var(--accent)']].map(([t,v,c])=>`<div class="r"><span>${t}</span><div class="t"><div style="width:${v*20}%;background:${c}"></div></div><b>${v}</b></div>`).join('')
+   +`<p class="muted">${b>a?'Du siehst deinen Einfluss jetzt größer. Was hat dich überzeugt?':b<a?'Du siehst deinen Einfluss jetzt kritischer. Woran liegt das – an Greenwashing, an Siegeln, an der Macht der Unternehmen?':'Deine Position ist gleich geblieben. Begründe sie mit Argumenten aus den Stationen.'}</p>`;
+}
+
+/* ---------- Quiz ---------- */
+const QUIZ=[
+ ['Welche Strategie verfolgt jemand, der sich vor dem Kauf fragt: „Brauche ich das wirklich?“','Effizienz','Konsistenz','Suffizienz','Kompensation',2,'Suffizienz setzt beim eigenen Verhalten an: weniger und länger nutzen.'],
+ ['Ein Unternehmen stellt seine Lager auf Ökostrom um. Das ist vor allem …','Effizienz','Konsistenz','Suffizienz','Greenwashing',1,'Schädliche Energie wird durch naturverträgliche ersetzt – Konsistenz.'],
+ ['Was beschreibt den Rebound-Effekt?','Sparsamere Produkte werden häufiger genutzt, die Einsparung schrumpft.','Recycelte Produkte kommen zurück in den Laden.','Preise steigen durch Siegel.','Unternehmen ziehen sich aus Ländern zurück.',0,'Effizienzgewinne werden durch mehr Nutzung teilweise aufgefressen.'],
+ ['Welches SDG steht für „Nachhaltige/r Konsum und Produktion“?','SDG 8','SDG 12','SDG 13','SDG 17',1,'SDG 12 ist das Kernziel für unser Konsumverhalten.'],
+ ['Welches Unternehmensziel ist am besten überprüfbar?','„Bis 2028 in allen Bereichen führend sein“','„Emissionen erheblich senken“','„Überproduktion jährlich um 40.000 Stück durch KI-Prognosen senken“','„Langfristig klimaneutral werden“',2,'Messgröße, Zeitraum und Maßnahme sind genannt.'],
+ ['Eine Fast-Food-Kette wirbt damit, keine Plastikstrohhalme mehr anzubieten. Welche Greenwashing-Strategie ist das?','Grüne Bildsprache','Werben mit Selbstverständlichkeiten','Leuchtturm-Produkt','Fragwürdiges Siegel',1,'Plastikstrohhalme sind ohnehin verboten.'],
+ ['Woran erkennst du ein glaubwürdiges Siegel NICHT?','unabhängiger Herausgeber','regelmäßige unabhängige Kontrolle','öffentliche Kriterien','ein grünes, natürlich wirkendes Logo',3,'Das Aussehen sagt nichts über die Glaubwürdigkeit.'],
+ ['Was garantiert das EU-Bio-Logo nicht?','ökologischen Anbau','regelmäßige Kontrollen','faire Löhne','einen einheitlichen EU-Standard',2,'Das EU-Bio-Logo enthält keine sozialen Kriterien.'],
+ ['Faire Löhne in der Fabrik ↔ niedrige Produktionskosten. Welche Zielbeziehung liegt vor?','Zielkongruenz','Zielkonflikt','Zielneutralität','Zielharmonie',1,'Höhere Löhne erhöhen die Kosten.'],
+ ['Nach welchen Kriterien prüft der wissenschaftliche Partner beim Sustainable Impact Award die Bewerbungen?','Umsatz, Gewinn und Wachstum','Wirkung, Nachvollziehbarkeit und Substanz','Bekanntheit der Marke','Anzahl der Siegel',1,'Gefordert sind messbare Ergebnisse – reine Projektideen zählen nicht.'],
+ ['Welche unbeabsichtigte Folge des Lieferkettengesetzes beschreibt das iwd?','Unternehmen ziehen sich aus Ländern mit schwacher Regierungsführung zurück – dort gehen Jobs verloren.','Alle Preise haben sich verdoppelt.','Siegel wurden verboten.','Es gibt keine Kinderarbeit mehr.',0,'Gut gemeint ist nicht immer gut gemacht.']
+];
+function initQuiz(){
+  const h=$('#quiz');QUIZ.forEach((q,i)=>{const d=el('div','qq');d.appendChild(el('p',null,`${i+1}. ${esc(q[0])}`));
+    q.slice(1,5).forEach((o,k)=>{const l=el('label');l.innerHTML=`<input type="radio" name="q${i}" value="${k}"> ${esc(o)}`;d.appendChild(l);});
+    d.appendChild(el('div','ex','💡 '+esc(q[6])));h.appendChild(d);});
+  const b=el('button','btn pri','Auswerten'),r=el('span','fb');const best=store.get('quizbest',null);if(best!=null)r.textContent=`Bisher bestes Ergebnis: ${best} von ${QUIZ.length}`;
+  b.onclick=()=>{let ok=0;$$('.qq',h).forEach((d,i)=>{d.classList.add('done');const s=$('input:checked',d);$$('label',d).forEach((l,k)=>{l.classList.remove('right','wrong');if(k===QUIZ[i][5])l.classList.add('right');else if(s&&+s.value===k)l.classList.add('wrong');});if(s&&+s.value===QUIZ[i][5])ok++;});
+    r.className='fb '+(ok>=7?'ok':'bad');r.textContent=`${ok} von ${QUIZ.length} richtig ${ok===QUIZ.length?'🎉':ok>=7?'👍':'– lies die Erklärungen!'}`;if(ok>store.get('quizbest',0))store.set('quizbest',ok);};
+  h.append(b,r);
+}
+
+
+/* ---------- SIA-Award ---------- */
+const SIA=[
+ {k:'Nachhaltige Unternehmensführung',d:'Verantwortung & Strategie: Nachhaltigkeit ist in der gesamten Unternehmensführung verankert.',w:[
+  ['LEBENSBAUM (Ulrich Walter GmbH)','Bio-Tee, -Kaffee und -Gewürze, Diepholz (seit 1979)',['nur Zutaten aus ökologischer Landwirtschaft – ohne chemisch-synthetische Pflanzenschutzmittel und ohne Gentechnik','feste Nachhaltigkeitskriterien entlang der gesamten Lieferkette','unabhängig geprüft (We-Care-Zertifizierung)'],['oeko','soz'],['kon'],null],
+  ['Runden Group','Familiengeführte Gruppe mit neun Gesellschaften, Oldenburger Münsterland',['Leitbild: „Kreislauf statt Verschwendung. Wiederverwendung statt Müllberge. Mehrweg statt Einweg.“','Mehrweg- und Poolingsysteme','Elektrifizierung von Gebäuden und Logistik'],['oeko','wirt'],['suf','kon'],null],
+  ['ARNOLD UMFORMTECHNIK','Verbindungssysteme, rund 1.455 Beschäftigte, seit 1994 Teil der Würth-Gruppe',['Ziel: Klimaneutralität bis 2040','Unterzeichner des UN Global Compact und der Klimaschutzvereinbarung Baden-Württemberg','zertifiziertes Umwelt- und Energiemanagement (ISO 14001, ISO 50001)'],['oeko','soz'],['eff'],null]]},
+ {k:'Enabler für Nachhaltigkeit',d:'Produkte & Dienstleistungen, mit denen andere nachhaltiger werden können.',w:[
+  ['NOKERA','Serieller Holzbau, Fabrik bei Magdeburg',['Holz als nachwachsender, CO₂-bindender Baustoff','industrielle Fertigung in der laut Unternehmen weltweit größten Fabrik für seriellen Holzbau','Beispiel: 35 Häuser mit 210 Wohnungen in Stuttgart bis 2028 – rund 30 % geringere Baukosten, Mieten ein Drittel unter dem örtlichen Durchschnitt (laut Wohnungsbaugesellschaft SWSG)'],['oeko','wirt','soz'],['kon','eff'],null],
+  ['OBJECT CARPET','Teppichböden, Produktion in Krefeld (gegründet 1972)',['recycelbarer Mono-Teppich und zirkulärer Teppich ohne Latex und Klebstoff','Schichten per „Click-Unclick“ wieder trennbar','2025 Übernahme der Recyclingmarke Niaga'],['oeko'],['kon'],null],
+  ['encentive','Energy-Tech-Unternehmen',['KI-Plattform flexOn steuert Energieflüsse in Industriebetrieben','Energie wird genutzt, „wenn sie günstig, verfügbar und erneuerbar ist“','verbindet Verbrauch, Erzeugung und Speicher bis auf Maschinenebene'],['oeko','wirt'],['eff','kon'],null]]},
+ {k:'Generali SME EnterPrize',d:'Sonderpreis für kleine und mittlere Unternehmen (30 bis 250 Beschäftigte).',w:[
+  ['Werner Schmid','Metall- und Kunststoffverarbeitung, Fulda (gegründet 1946)',['Bauteile u. a. für Elektromobilität, E-Bikes und Wärmepumpen','berät Kunden schon beim Bauteilentwurf, um ressourcenschonend zu fertigen','beide Geschäftsführer im Energieteam, einer ist Umweltbeauftragter'],['oeko','wirt'],['eff'],'Die Award-Webseite selbst nennt keine Kennzahlen zur Nachhaltigkeit.'],
+  ['followfood','Bio-Lebensmittel und Fisch (seit 2007)',['„Bio im Kern“, verantwortungsvolle Fischerei','Tracking-Code auf der Verpackung: Transparenz „vom Fang bis zum Teller“','2024 dreifach mit dem Deutschen Nachhaltigkeitspreis ausgezeichnet'],['oeko','soz'],['kon'],null],
+  ['KNAUER Wissenschaftliche Geräte','Laborgeräte, Berlin (seit über 60 Jahren)',['Hightech-Laborgeräte und Anlagen zur Herstellung von Lipid-Nanopartikeln (z. B. für mRNA-Impfstoffe)','Produktion in Berlin'],['wirt','soz'],[],'Die Award-Webseite nennt keine konkreten Nachhaltigkeitsmaßnahmen. Recherchiere: Wofür wurde KNAUER ausgezeichnet?']]},
+ {k:'Generali NewComer EnterPrize',d:'Für Start-ups und Newcomer (bis 30 Beschäftigte, höchstens 3 Jahre am Markt).',w:[
+  ['re.solution','Start-up aus der RWTH Aachen (gegründet 2023)',['recycelt Polyester aus Alttextilien – auch aus schwer trennbaren Mischfasern – zu Rohstoffen in Neuware-Qualität','ohne die rund 1 t Chemie- bzw. Salzabfall pro Tonne, die bei anderen Verfahren anfällt','betrieben mit Ökostrom; bis zu 90 % weniger CO₂ und 74 % weniger Wasser (laut Unternehmen)','erste Großanlage in NRW für 2029 geplant'],['oeko','wirt'],['kon'],null],
+  ['Rement','Start-up aus Karlsruhe (gegründet 2025, 12 Personen)',['verwandelt Abbruchbeton und CO₂ in Recycling-Sand und Calciumcarbonat','nutzt die „urbane Mine“ statt natürlicher Vorkommen','Pilotanlage erfolgreich getestet'],['oeko','wirt'],['kon'],null],
+  ['VANDEYK Tech','Ausgründung der Fraunhofer-Gesellschaft',['PFAS-freie Hochleistungsbeschichtungen für Textilien (Sport, Outdoor, Arbeitskleidung)','wasserbasierte Materialplattform'],['oeko','soz'],['kon'],null]]}
+];
+SORTS.sia={cats:['eff','kon','suf'],items:[
+  ['re.solution: Polyester aus Alttextilien wird wieder zu Rohstoff in Neuware-Qualität','kon','Aus Abfall wird Rohstoff – ein Kreislauf: Konsistenz.'],
+  ['NOKERA: Bauen mit nachwachsendem, CO₂-bindendem Holz statt Beton','kon','Ein naturverträglicher Baustoff ersetzt einen klimaschädlichen: Konsistenz.'],
+  ['OBJECT CARPET: Teppich ohne Klebstoff, Schichten per Click-Unclick trennbar','kon','Das Produkt wird kreislauffähig gestaltet: Konsistenz.'],
+  ['VANDEYK: PFAS-freie Beschichtung für Outdoor-Kleidung','kon','Ein schädlicher Stoff wird durch einen verträglichen ersetzt: Konsistenz.'],
+  ['Werner Schmid: Kunden schon beim Bauteilentwurf zu ressourcenschonender Fertigung beraten','eff','Weniger Material und Energie pro Bauteil: Effizienz.'],
+  ['encentive: KI verschiebt den Energieverbrauch in Zeiten mit viel günstigem Ökostrom','eff','Energie wird intelligenter genutzt (Effizienz) – und mehr erneuerbare Energie eingesetzt (Konsistenz). Beides ist vertretbar.','kon'],
+  ['Runden Group: Mehrweg- und Poolingsysteme statt Einweg','suf','Dinge werden immer wieder genutzt und geteilt, statt neu produziert zu werden: Suffizienz. (Auch Konsistenz ist vertretbar.)','kon'],
+  ['LEBENSBAUM: Anbau ohne chemisch-synthetische Pflanzenschutzmittel','kon','Naturverträgliche Anbauweise: Konsistenz.'],
+  ['Rement: Abbruchbeton wird zu Recycling-Sand','kon','Bauschutt wird zum Rohstoff: Konsistenz (Kreislaufwirtschaft).']
+]};
+function initSIA(){
+  const bar=$('#siacats'),pod=$('#podium'),jm=$('#jurymode');jm.checked=store.get('jurymode',false);
+  const votes=store.get('siavotes',{});
+  const show=ci=>{
+    $$('button',bar).forEach((b,k)=>b.classList.toggle('on',k===ci));const C=SIA[ci];$('#siacatdesc').textContent=C.d;pod.innerHTML='';
+    const hide=jm.checked&&votes[ci]==null;
+    const order=hide?(store.get('siaord'+ci,null)||(()=>{const o=shuffle([0,1,2]);store.set('siaord'+ci,o);return o;})()):[0,1,2];
+    order.forEach(i=>{const [n,what,ms,dims,str,warn]=C.w[i];const d=el('div','win p'+(i+1)+(hide?' hidden-rank':'')+(votes[ci]===i?' voted':''));
+      d.innerHTML=`<span class="place">${['🥇 Platz 1','🥈 Platz 2','🥉 Platz 3'][i]}</span><h4>${esc(n)}</h4><span class="what">${esc(what)}</span>
+        <ul>${ms.map(m=>`<li>${esc(m)}</li>`).join('')}</ul>
+        <div>${dims.map(k=>`<span class="pill p-${k}">${CAT[k].l}</span>`).join('')}</div>
+        ${warn?`<div class="warn">⚠️ ${esc(warn)}</div>`:''}`;
+      if(hide){const b=el('button','btn sm pri vote','Mein Sieger');b.onclick=()=>{votes[ci]=i;store.set('siavotes',votes);show(ci);
+        const fb=el('p','fb '+(i===0?'ok':'bad'),i===0?'🎉 Du hast genauso entschieden wie die Jury!':'Die Jury hat anders entschieden. Was hat sie vielleicht anders gewichtet?');fb.style.margin='10px 0 0';pod.after(fb);setTimeout(()=>fb.remove(),6000);};d.appendChild(b);}
+      else if(votes[ci]===i&&jm.checked){d.appendChild(el('span','pill','Deine Wahl'));}
+      pod.appendChild(d);});
+    store.set('siacat',ci);};
+  SIA.forEach((C,i)=>{const b=el('button',null,esc(C.k));b.type='button';b.onclick=()=>show(i);bar.appendChild(b);});
+  jm.onchange=()=>{store.set('jurymode',jm.checked);if(jm.checked){for(const k in votes)delete votes[k];store.set('siavotes',votes);}show(store.get('siacat',0));};
+  show(store.get('siacat',0));
+  const h=$('#siacheck');[['unabhängiger Herausgeber / unabhängige Jury'],['Angaben werden kontrolliert und geprüft'],['Bewertungskriterien sind öffentlich']].forEach(([q],k)=>{
+    const d=el('div','labcase');const opts=['ja','teilweise','nein'];const v=store.get('siachk'+k,'');
+    d.innerHTML=`<b>${q}?</b><div class="chk">${opts.map(o=>`<label><input type="radio" name="siachk${k}" value="${o}"${v===o?' checked':''}> ${o}</label>`).join('')}</div>`;
+    $$('input',d).forEach(r=>r.onchange=()=>store.set('siachk'+k,r.value));h.appendChild(d);});
+}
+
+/* ---------- Kodex ---------- */
+const KODEX=[
+ ['Vor dem Kauf','vor',['Ich frage mich, ob ich es wirklich brauche.','Ich prüfe, ob ich es leihen, tauschen oder gebraucht kaufen kann.','Ich informiere mich über glaubwürdige Siegel.','Ich warte bei Spontankäufen 24 Stunden.']],
+ ['Beim Kauf','bei',['Ich kaufe nicht nur nach dem Preis.','Ich lasse mich von grüner Werbung nicht blenden und achte auf Belege.','Ich kaufe bevorzugt regional und ohne unnötige Verpackung.','Ich achte auf Qualität und Langlebigkeit.']],
+ ['Nach dem Kauf','nach',['Ich nutze Dinge lange und repariere sie.','Ich gebe Dinge, die ich nicht mehr brauche, weiter oder verkaufe sie.','Ich trenne meinen Müll richtig.','Ich wasche Kunstfaser-Kleidung seltener.']]
+];
+function initKodex(){
+  const h=$('#kodexbox');const nm=$('#kname');nm.value=store.get('kname','');nm.oninput=()=>store.set('kname',nm.value);
+  KODEX.forEach(([t,k,sug])=>{const d=el('div','ph');d.innerHTML=`<h4>${t}</h4>`;const ta=el('textarea');ta.value=store.get('kodex:'+k,'');ta.placeholder='Ich …';ta.setAttribute('aria-label',t);ta.oninput=()=>store.set('kodex:'+k,ta.value);
+    const c=el('div','chips');sug.forEach(s=>{const b=el('button',null,'+ '+esc(s));b.type='button';b.onclick=()=>{ta.value=(ta.value.trim()?ta.value.trim()+'\n':'')+'• '+s;ta.oninput();};c.appendChild(b);});
+    d.append(ta,c);h.appendChild(d);});
+}
+
+/* ---------- Navigation ---------- */
+const ST=$$('section.st');
+function visited(){return store.get('visited',{});}
+function nav(){
+  const v=visited(),cur=(ST.find(s=>s.classList.contains('on'))||{}).id;const n=$('#nav');n.innerHTML='';
+  ST.forEach(s=>{const b=el('button',null,esc(s.dataset.nav)+(v[s.id]&&s.id!=='start'?'<span class="done">✓</span>':''));b.type='button';if(s.id===cur)b.classList.add('on');b.onclick=()=>{location.hash=s.id;};n.appendChild(b);});
+  const tot=ST.length-1,dn=ST.filter(s=>s.id!=='start'&&v[s.id]).length;$('#bar').style.width=(dn/tot*100)+'%';
+  const on=$('button.on',n);if(on)on.scrollIntoView({block:'nearest',inline:'nearest'});
+}
+function show(id){if(!ST.some(s=>s.id===id))id='start';ST.forEach(s=>s.classList.toggle('on',s.id===id));const v=visited();v[id]=true;store.set('visited',v);store.set('last',id);window.scrollTo(0,0);nav();if(id==='kodex')comparePos();}
+function build(){
+  const r=$('#route');
+  ST.forEach((s,i)=>{
+    if(s.id!=='start'){const b=el('button',null,`<i>${i<ST.length-1?'STATION '+i:'ABSCHLUSS'}</i><b>${esc(s.querySelector('h1').textContent)}</b><small>${esc(s.dataset.sub||'')}</small>`);b.type='button';b.onclick=()=>{location.hash=s.id;};r.appendChild(b);}
+    const f=el('div','foot');const p=ST[i-1],nx=ST[i+1];
+    const pb=el('button','btn',p?'← '+esc(p.dataset.nav):'');pb.style.visibility=p?'':'hidden';if(p)pb.onclick=()=>{location.hash=p.id;};
+    const nb=el('button','btn pri',nx?esc(nx.dataset.nav)+' →':'');nb.style.visibility=nx?'':'hidden';if(nx)nb.onclick=()=>{location.hash=nx.id;};
+    f.append(pb,nb);s.appendChild(f);});
+}
+function init(){
+  build();
+  $$('[data-sort]').forEach(renderSort);
+  initTri();initSDG();initZC();initFlow();initFirms();
+  const gs=$('#gwstrat');GWS.forEach(([t,d])=>gs.appendChild(el('div','card',`<b>${t}</b><p style="margin:6px 0 0">${d}</p>`)));
+  reveal($('#mcd'),MCD);reveal($('#hm'),HM);
+  initLabels();
+  const dh=$('#disasters');DIS.forEach(([n,t,m])=>{const d=el('div','disaster');d.tabIndex=0;d.setAttribute('role','button');d.innerHTML=`<b class="n">${n} Tote</b><b>${t}</b><div class="more">${esc(m)}</div><span class="muted" style="font-size:.82rem">${'＋ mehr erfahren'}</span>`;const t2=()=>{d.classList.toggle('open');$('span.muted',d).textContent=d.classList.contains('open')?'－ weniger':'＋ mehr erfahren';};d.onclick=t2;d.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();t2();}};dh.appendChild(d);});
+  LKPOS.forEach((q,i)=>posline($('#lkpos'),'lk'+i,q));
+  posline($('#pos-before'),'main-before',MAINQ);posline($('#pos-after'),'main-after',MAINQ);
+  initSIA();initQuiz();initKodex();
+  window.addEventListener('hashchange',()=>show(location.hash.slice(1)));
+  show(location.hash.slice(1)||store.get('last','start'));
+}
+init();
+</script>
+</body>
+</html>
